@@ -1,0 +1,288 @@
+/* Branding Solutions Intro Section */
+.branding-intro {
+    margin-bottom: 30px;
+  }
+  .brand-heading {
+    font-family: 'Allegro', cursive;
+    color: #013d79;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  .brand-description {
+    font-family: 'Garamond', serif;
+    color: #333;
+    font-size: 1.1rem;
+  }
+  
+  /* Logo Designing Box */
+  .logo-box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .logo-box h3 {
+    font-family: 'Allegro', cursive;
+    color: #013d79;
+    margin-bottom: 15px;
+  }
+  .logo-box p {
+    font-family: 'Garamond', serif;
+    color: #333;
+  }
+  .service-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    animation: blinkAnimation 1s infinite;
+  }
+  
+  /* Contact Form without Box */
+  .contact-form {
+    margin-top: 15px;
+    min-height: 15%;
+  }
+  .contact-form h4 {
+    font-family: 'Allegro', cursive;
+    color: #013d79;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .input-group {
+    margin-bottom: 15px;
+  }
+  .form-control {
+    border-radius: 5px;
+  }
+  textarea {
+    height: 150px;
+  }
+  .submit-btn {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #013d79;
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px;
+    display: block;
+  }
+  /* Brand Management Section */
+.brand-management {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+    margin-bottom: 40px; /* Adds gap between Brand Management and next section */
+  }
+  
+  /* Brand Management Box */
+  .brand-box {
+    width: 80%; /* Default width for larger screens */
+    height: 220px; /* Default height */
+    background-color: transparent;
+    border-radius: 100px; /* Horizontal oval shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #013d79; /* Blue border for the oval box */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation on hover */
+    position: relative;
+    overflow: hidden; /* Prevent text from overflowing */
+  }
+  
+  /* Hover effect for the Brand Box */
+  .brand-box:hover {
+    transform: translateY(-10px); /* Moves the box up on hover */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); /* More shadow effect on hover */
+  }
+  
+  /* Image inside the oval box */
+  .brand-img {
+    width: 150px; /* Set image size */
+    height: 150px; /* Set image size */
+    border-radius: 100%; /* Circular image */
+    margin-right: 15px;
+    object-fit: cover; /* Ensure the image does not stretch */
+  }
+  
+  /* Heading in Galliard BT font style */
+  .brand-box h3 {
+    font-family: "Galliard BT", serif;
+    color: #013d79;
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: color 0.3s ease; /* Smooth color transition */
+    text-align: left; /* Align text left */
+  }
+  
+  /* Text in Garamond font style */
+  .brand-box p {
+    font-family: "Garamond", serif;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    word-wrap: break-word; /* Ensure text wraps and doesn't overflow */
+    line-height: 1.5;
+  }
+  
+  /* Hover effect for the text */
+  .brand-box:hover h3 {
+    color: #0073e6;
+  }
+  
+  .brand-box:hover p {
+    color: #555;
+  }
+  
+  /* Mobile View for Brand Management Section */
+@media (max-width: 768px) {
+    /* Make the brand box take more space on mobile */
+    .brand-box {
+      width: 90%; /* Increase the width to fit better */
+      height: 250px; /* Increase the height of the box */
+      flex-direction: column; /* Stack the image and text vertically */
+      padding: 20px;
+    }
+  
+    /* Adjust image size on mobile */
+    .brand-img {
+      width: 150px; /* Slightly larger image */
+      height: 150px;
+      margin-right: 0; /* Remove right margin */
+      margin-bottom: 15px; /* Space between image and text */
+    }
+  
+    /* Adjust heading size on mobile */
+    .brand-box h3 {
+      font-size: 20px; /* Larger heading size */
+      margin-right: 0; /* Remove right margin */
+      text-align: center; /* Center align text on mobile */
+      margin-bottom: 10px; /* Add space between the image and heading */
+    }
+  
+    /* Adjust paragraph size on mobile */
+    .brand-box p {
+      font-size: 14px; /* Smaller text size */
+      text-align: center; /* Center align text */
+    }
+  }
+  
+  /* Small Screen (Phones) - Compact Adjustments */
+  @media (max-width: 480px) {
+    .brand-box {
+      width: 100%; /* Take full width on very small screens */
+      height: 280px; /* Increase height on very small screens */
+    }
+  
+    .brand-img {
+      width: 140px; /* Larger image */
+      height: 140px;
+    }
+  
+    .brand-box h3 {
+      font-size: 18px; /* Slightly smaller heading */
+    }
+  
+    .brand-box p {
+      font-size: 12px; /* Adjust text size for small screens */
+    }
+  }
+  
+/* Circle Boxes */
+.circle-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Ensure spacing between circles */
+}
+
+/* Branding Techniques Section Styling */
+.branding-techniques .heading {
+    font-family: 'STEAMER', sans-serif; /* Apply STEAMER font to heading */
+    color: #013d79;/* Blue color for heading */
+    margin-bottom: 20px; /* Adds space between the heading and the text */
+  }
+  
+  .branding-techniques .subheading {
+    font-family: 'Lucida Handwriting', cursive; /* Apply Lucida Handwriting font for text */
+    margin-bottom: 40px; /* Adds gap between the text and the circle boxes */
+  }
+  
+
+.circle {
+  background-color: transparent; /* Remove the background blue */
+  color: #013d79; /* Set circle text color to blue */
+  width: 220px; /* Increase the width of circles */
+  height: 220px; /* Increase the height of circles */
+  border-radius: 50%; /* Make circles */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #010102; /* Blue border for circles */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.circle h5 {
+  font-family: Geneva, sans-serif; /* Set Geneva font for circle headings */
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #013d79;
+}
+
+.circle p {
+  font-family: Garamond, serif; /* Set Garamond font for circle text */
+  font-size: 14px;
+  color: #0e0f0f; /* Blue text for circle descriptions */
+}
+
+/* Hover Effect on Circles */
+.circle:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Add background images for each circle */
+.circle:nth-child(1) {
+    background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-130033.jpg'); /* Replace with actual image path */
+  }
+  
+  .circle:nth-child(2) {
+    background-image: url('https://e0.pxfuel.com/wallpapers/986/360/desktop-wallpaper-background-color-4851-background-color-theme-colorful-brown-color.jpg'); /* Replace with actual image path */
+  }
+  
+  .circle:nth-child(3) {
+    background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-130033.jpg'); /* Replace with actual image path */
+  }
+  
+  .circle:nth-child(4) {
+    background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-4174.jpg'); /* Replace with actual image path */
+  }
+  
+  .circle:nth-child(5) {
+    background-image: url('https://img.freepik.com/premium-photo/brown-gold-background-with-white-background_867442-265.jpg'); /* Replace with actual image path */
+  }
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .circle {
+    width: 180px; /* Smaller circles for mobile */
+    height: 180px;
+  }
+
+  .branding-techniques h3 {
+    font-size: 24px; /* Smaller heading for mobile */
+  }
+
+  .branding-techniques p {
+    font-size: 14px; /* Smaller text for mobile */
+  }
+}

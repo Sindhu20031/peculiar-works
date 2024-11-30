@@ -1,0 +1,263 @@
+/* HR Recruitment Page Styles */
+.hr-recruitment-intro h1 {
+    font-family: 'Steamers', cursive;
+    color: #013d79;
+  }
+  
+  .hr-recruitment-intro p {
+    font-family: 'Momotype Corsiva', cursive;
+    color: #333;
+  }
+  
+  /* Service Box Styles */
+  .service-box {
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: space-between; /* Evenly distribute space between items */
+    height: 100%; /* Ensures equal height */
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .service-box h3 {
+    font-family: 'Steamers', cursive;
+    color: #013d79;
+  }
+  
+  .service-box p {
+    font-family: 'Momotype Corsiva', cursive;
+    color: #333;
+  }
+  
+  .service-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .contact-image-form-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Center all the items vertically within the box */
+    background-color: #f8f9fa; /* Background for the box */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out; /* Animation for the entire box */
+  }
+  
+  .contact-image {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically within the container */
+    flex: 1;
+    height: 100%; /* Ensures that the image container takes up full height of the box */
+  }
+  
+  .contact-image img {
+    max-width: 80%; /* Controls the image size */
+    height: auto; /* Keeps the image's aspect ratio intact */
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+  }
+  
+  .contact-image img:hover {
+    transform: scale(1.1); /* Zooms in the image when hovered */
+  }
+  
+  .contact-form {
+    flex: 1;
+    max-width: 400px; /* Adjust for the desired size */
+    margin-left: 20px; /* Space between the image and form */
+  }
+  
+  .contact-form h4 {
+    font-family: 'Steamers', cursive;
+    color: #013d79;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-input {
+    border: none; /* Remove default border */
+    border-bottom: 2px solid #013d79; /* Underline style */
+    background: transparent; /* Transparent background */
+    font-size: 1rem;
+    padding: 10px 5px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-input:focus {
+    outline: none;
+    border-bottom: 2px solid #0056b3; /* Focused color */
+  }
+  
+  .message-box {
+    height: 150px;
+  }
+  
+  button {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #013d79;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block;
+  }
+  .contact-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Aligns the image to the bottom of its container */
+    flex: 1;
+  }
+  
+  
+  /* Animation for the entire box */
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  
+  /* Advanced Tool Box Styles with Theme Colors */
+.advanced-tool-box {
+    background: linear-gradient(45deg, #013d79, #0056b3); /* Default gradient color for the box */
+    color: #fff; /* Ensures text visibility */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    height: 100%; /* Ensures equal height */
+  }
+  
+  /* Individual Theme Colors for Boxes */
+  .advanced-tool-box:nth-child(1) {
+    background: linear-gradient(45deg, #0056b3, #017dcd); /* Blue gradient */
+  }
+  
+  .advanced-tool-box:nth-child(2) {
+    background: linear-gradient(45deg, #013d79, #5a91c4); /* Lighter blue */
+  }
+  
+  .advanced-tool-box:nth-child(3) {
+    background: linear-gradient(45deg, #1c598a, #6fa8dc); /* Soft cyan */
+  }
+  
+  .advanced-tool-box:nth-child(4) {
+    background: linear-gradient(45deg, #002a4d, #334e68); /* Dark navy */
+  }
+  
+  .advanced-tool-box:nth-child(5) {
+    background: linear-gradient(45deg, #2a6780, #3e92cc); /* Vibrant blue */
+  }
+  
+  /* Hover Animation */
+  .advanced-tool-box:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    background: linear-gradient(45deg, #013d79, #0096ff); /* Changes color on hover */
+  }
+  
+  /* Heading Styles */
+  .advanced-tool-box h5 {
+    font-family: 'Steamers', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #fff; /* Ensures the heading text stands out */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Paragraph Styles */
+  .advanced-tool-box p {
+    font-family: 'Momotype Corsiva', cursive;
+    font-size: 1rem;
+    color: #1dc2ca; /* Subtle text color */
+  }
+  /* Adjusted Width and Center Alignment */
+.advanced-tool-box {
+    max-width: 1000px; /* Set the desired width */
+    margin: 0 auto 30px; /* Center horizontally and add bottom margin for spacing */
+    padding: 20px; /* Adjust padding for smaller width */
+  }
+  
+  /* Row Centering */
+  .row {
+    justify-content: center; /* Centers the boxes horizontally within the row */
+  }
+  
+  /* Gap Between Last Box and Footer */
+  .row:last-of-type {
+    margin-bottom: 50px; /* Adjust gap below the last row */
+  }
+  .cutting-edge h3 {
+    font-family: 'Steamers', cursive;
+    font-size: 2rem; /* Adjust size as needed */
+    color: #013d79; /* Theme color for the text */
+    text-align: center; /* Centers the heading */
+    position: relative;
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .cutting-edge h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px; /* Adjust distance from the text */
+    transform: translateX(-50%); /* Centers the underline */
+    width: 80%; /* Adjust underline width */
+    height: 4px; /* Thickness of the underline */
+    background: linear-gradient(90deg, #0056b3, #013d79); /* Gradient color for underline */
+    border-radius: 2px; /* Rounded corners for the underline */
+  }
+  
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .advanced-tool-box {
+      max-width: 100%; /* Full width for smaller screens */
+      padding: 15px; /* Adjust padding */
+    }
+  
+    .row:last-of-type {
+      margin-bottom: 30px; /* Adjust gap for mobile screens */
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .advanced-tool-box {
+      margin-bottom: 20px;
+      width: 100%; /* Full width for mobile */
+    }
+  }
+  
+  /* Animation Keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .advanced-tool-box {
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  }
+  

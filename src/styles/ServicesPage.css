@@ -1,0 +1,144 @@
+/* src/styles/ServicesPage.css */
+/* Services Heading */
+.servicesHeading {
+  font-family: "CALISTO MT", serif;
+  font-size: 3rem;
+  text-align: center;
+  color: black;
+  margin-top: 80px; /* Adjust top margin */
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.servicesHeading::after {
+  content: "";
+  display: block;
+  width: 7%; /* Adjust the width of the underline */
+  height: 2px;
+  background-color: #013d79; /* Color for the underline */
+  margin: 10px auto 45px; /* Center the underline */
+}
+
+
+.pageContainer {
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  .pageContainer .serviceTitle {
+    color: #ffffff; /* White color for service box titles */
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Add text shadow for better contrast */
+}
+  
+  .heading {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .serviceBox {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .serviceBox:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevation */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .serviceTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .serviceDescription {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .getQuoteButton {
+    padding: 0.6rem 1.2rem;
+    background: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+  }
+  
+  .getQuoteButton:hover {
+    background: #e68900; /* Darken the button on hover */
+  }
+  
+  .getQuoteButton:active {
+    animation: blinkEffect 0.5s ease-out; /* Blink effect when clicked */
+  }
+  
+  @keyframes blinkEffect {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9); /* Shrink the button */
+    }
+    100% {
+      transform: scale(1); /* Return to normal size */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 2rem;
+    }
+    .serviceBox {
+      height: 250px;
+    }
+    .serviceTitle {
+      font-size: 1.3rem;
+    }
+    .serviceDescription {
+      font-size: 0.9rem;
+    }
+    .getQuoteButton {
+      padding: 0.5rem 1rem;
+    }
+  }
+  

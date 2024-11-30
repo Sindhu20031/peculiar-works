@@ -1,0 +1,290 @@
+/* General Styling */
+.digital-marketing-page {
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://wallpapers.com/images/featured/blank-white-7sn5o1woonmklx1h.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  color: #0f0f10ef;
+  font-weight: bold;
+}
+
+/* Digital Marketing Heading */
+.digital-marketing-heading {
+  font-size: 3rem; /* Adjust font size */
+  color: #121111; /* Black color */
+  text-align: center; /* Center align the text */
+  margin-bottom: 38px; /* Space below the heading */
+}
+
+/* Service Boxes */
+.info-box {
+  background: #b28e7400;
+  padding: 20px;
+  border: 1px solid #592392;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.info-box:hover {
+  background: #066db8;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-image {
+  max-height: 150px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.info-title {
+  color: #a4afc1;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.info-description {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+/* Cutting-edge container styling */
+.cutting-edge-container {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text color */
+  text-align: center;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.cutting-edge-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: rgb(255, 123, 0); /* Orange title color */
+}
+
+.cutting-edge-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #d3d3d3; /* Light grey description text */
+}
+
+/* Cutting-edge list (Desktop View) */
+.cutting-edge-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Styling for each list item */
+.cutting-edge-list li {
+  background-color: #1a1a1a; /* Slightly lighter black for contrast */
+  border-radius: 50%; /* Circular shape */
+  width: 200px; /* Set the width of each box */
+  height: 200px; /* Set the height of each box */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(255, 165, 0, 0.4); /* Orange shadow */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cutting-edge-list li strong {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: block;
+  color: rgb(255, 123, 0); /* Orange text for headers */
+}
+
+.cutting-edge-list li p {
+  color: #d3d3d3; /* Light grey for paragraphs */
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Hover effect */
+.cutting-edge-list li:hover {
+  transform: scale(1.1); /* Zoom effect */
+  box-shadow: 0 6px 15px rgba(255, 165, 0, 0.6); /* Stronger shadow on hover */
+}
+
+/* Mobile View - Adjust Cutting-edge round circles */
+@media (max-width: 768px) {
+  /* Cutting-edge list stacking vertically */
+  .cutting-edge-list {
+    display: flex;
+    flex-direction: column; /* Stack vertically on mobile */
+    align-items: center; /* Center the boxes */
+    gap: 30px; /* Space between stacked items */
+  }
+
+  /* Styling for each cutting-edge circle */
+  .cutting-edge-list li {
+    width: 300px; /* Increased size of the circle */
+    height: 300px; /* Maintain a proper aspect ratio */
+    margin-bottom: 34px; /* Space between circles */
+    padding: 25px; /* Adjust padding for text alignment */
+    font-size: 1.2rem; /* Ensure text is readable */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+
+  /* Hover effect for cutting-edge circles on mobile */
+  .cutting-edge-list li:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+
+  /* Title inside each cutting-edge circle */
+  .cutting-edge-list li strong {
+    font-size: 1.4rem; /* Increase font size for titles */
+    margin-bottom: 15px; /* Space between title and description */
+  }
+
+  /* Description text inside the cutting-edge circle */
+  .cutting-edge-list li p {
+    font-size: 1rem; /* Ensure the description text is readable */
+    color: #d3d3d3; /* Grey color for description text */
+  }
+
+  /* Cutting-edge title and description */
+  .cutting-edge-title {
+    font-size: 2rem; /* Smaller title size for mobile */
+  }
+
+  .cutting-edge-description {
+    font-size: 1rem; /* Smaller description text for mobile */
+  }
+
+  /* Adjust SEO/PPC Service boxes */
+  .info-box {
+    width: 100%; /* Take up full width */
+    max-width: 280px; /* Limit the width for a better fit */
+    margin: 15px auto; /* Center the boxes */
+    padding: 15px; /* Reduced padding */
+    font-size: 1rem; /* Reduce font size for mobile */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .info-image {
+    max-height: 120px; /* Reduced image size for mobile */
+    object-fit: cover;
+  }
+
+  .info-title {
+    font-size: 1.1rem; /* Adjusted title font size */
+    margin-bottom: 10px;
+  }
+
+  .info-description {
+    font-size: 0.9rem; /* Smaller font size for description */
+  }
+}
+
+/* Very small screens like phones */
+@media (max-width: 480px) {
+  /* Cutting-edge circles size adjustments for very small screens */
+  .cutting-edge-list li {
+    width: 200px; /* Slightly smaller circles on very small screens */
+    height: 200px;
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .cutting-edge-list li strong {
+    font-size: 1.2rem; /* Slightly smaller font size for very small screens */
+  }
+
+  .cutting-edge-list li p {
+    font-size: 0.9rem; /* Adjust description font size for small screens */
+  }
+
+  /* Adjust SEO/PPC boxes further for small screens */
+  .info-box {
+    width: 100%; /* Full width for the boxes */
+    max-width: 250px; /* Limit max width */
+    padding: 10px; /* Reduced padding */
+  }
+
+  .info-image {
+    max-height: 100px; /* Adjust image size for smaller screens */
+  }
+
+  .info-title {
+    font-size: 1rem; /* Further reduced font size */
+  }
+
+  .info-description {
+    font-size: 0.8rem; /* Smaller description text */
+  }
+}
+
+
+/* Contact Form Adjustments */
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #f8f9fa; /* Light grey background */
+  border-top: 2px solid #ccc; /* Optional border for separation */
+  text-align: center;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: rgb(255, 123, 0); /* Orange text for the title */
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-form .form-control {
+  border-radius: 5px;
+}
+
+.contact-form .btn-submit {
+  background-color: rgb(255, 123, 0); /* Orange button */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-submit:hover {
+  background-color: rgb(255, 100, 0); /* Darker orange on hover */
+}
+
+.response-message {
+  color: #28a745; /* Success message color (green) */
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 30px 10px;
+  }
+}

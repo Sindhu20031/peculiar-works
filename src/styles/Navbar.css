@@ -1,0 +1,72 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Navbar Container */
+  .navbar {
+    background-color: #e5e4e2; /* Ash color for navbar background */
+    padding: 0.5rem 0;
+    z-index: 1030;
+  }
+  
+  /* Brand Styling */
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-family: "Garamond", serif; /* Garamond font for the company name */
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Navbar Links */
+  .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+  
+  .nav-link.active {
+    text-decoration: underline; /* Underline for active link */
+    color: black;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+    color: gray;
+  }
+  
+  /* Hamburger Menu Styling */
+.navbar-toggler {
+    border: none; /* Remove default border */
+    background-color: transparent; /* Transparent background for button */
+    position: absolute;
+    top: 15px; /* Position hamburger in top-right corner */
+    right: -60px;
+  }
+  /* Mobile View Navbar */
+@media (max-width: 768px) {
+    .navbar-nav {
+      display: flex;
+      flex-direction: column; /* Stack menu items vertically */
+      align-items: flex-end; /* Align items to the right */
+      margin-right: 10px; /* Add space on the right */
+    }
+  
+    /* Navbar collapse for mobile */
+    .navbar-collapse {
+      justify-content: flex-end; /* Align the collapse items to the right */
+    }
+  
+    .navbar-toggler-icon {
+      background-color: rgb(240, 231, 231); /* Ensure hamburger icon is visible */
+    }
+  }
+  
+  /* Show the menu items when hamburger is clicked */
+  .navbar-collapse.collapse.show {
+    display: block !important; /* Force the navbar to show */
+  }

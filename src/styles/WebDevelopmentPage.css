@@ -1,0 +1,220 @@
+
+/* Web Development Intro Section */
+.web-dev-intro h1 {
+    font-family: 'Allegro', cursive;
+    color: #013d79;
+    margin-bottom: 20px;
+  }
+  .row {
+    display: flex;
+  }
+  
+  .col-md-7, .col-md-5 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .web-dev-intro p {
+    font-family: 'Garamond', serif;
+    color: #333;
+    font-size: 1.1rem;
+  }
+  
+  /* Service Boxes */
+  .box {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .box h3 {
+    font-family: 'Allegro', cursive;
+    color: #013d79;
+  }
+  
+  .box p {
+    font-family: 'Garamond', serif;
+    color: #333;
+  }
+  
+  .service-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    animation: blinkAnimation 1s infinite;
+  }
+  
+  @keyframes blinkAnimation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Contact Form Styling */
+  .contact-form {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 95%; /* Ensure the contact form matches the height of the left box */
+  }
+  
+  .contact-form h4 {
+    font-family: 'Allegro', cursive;
+    color: #013d79;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form .form-control {
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-form .message-box {
+    height: 150px; /* Increase the size of the message box */
+  }
+  
+  .contact-form button {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #013d79;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: block; /* Center align the button */
+  }
+  
+  /* Cutting-Edge Technology - Curved Boxes */
+.curve-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  /* Individual curve boxes */
+  .curve {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 25px;
+    width: 17.3%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+  justify-content: space-between; /* Distribute space between the heading and text */
+  height: 330px;
+  }
+  
+  /* Cutting-Edge Technology Section Heading */
+.cutting-edge h3 {
+    font-family: 'Galliard BT', serif; /* Set the font style to Galliard BT */
+    color: #0b3f73; /* Blue color for the heading */
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Add some space below the heading */
+    font-size: 2rem; /* Adjust font size as needed */
+  }
+  
+  /* Cutting-Edge Technology Section Text */
+  .cutting-edge p {
+    font-family: 'Garamond', serif; /* Set the font style to Garamond */
+    color: #000000; /* Black color for the paragraph text */
+    text-align: center; /* Center align the paragraph text */
+    font-size: 1.1rem; /* Adjust font size for readability */
+    margin-top: 10px; /* Space above the paragraph */
+    margin-bottom: 30px; /* Space below the paragraph */
+  }
+  
+
+
+  /* Add different background images to each box */
+  .curve:nth-child(1) {
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210918/pngtree-cream-texture-light-champagne-realistic-style-simple-background-image_902979.png'); /* Replace with actual image URL */
+  }
+  
+  .curve:nth-child(2) {
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210918/pngtree-cream-texture-light-champagne-realistic-style-simple-background-image_902979.png'); /* Replace with actual image URL */
+  }
+  
+  .curve:nth-child(3) {
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210918/pngtree-cream-texture-light-champagne-realistic-style-simple-background-image_902979.png'); /* Replace with actual image URL */
+  }
+  
+  .curve:nth-child(4) {
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210918/pngtree-cream-texture-light-champagne-realistic-style-simple-background-image_902979.png'); /* Replace with actual image URL */
+  }
+  
+  .curve:nth-child(5) {
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210918/pngtree-cream-texture-light-champagne-realistic-style-simple-background-image_902979.png'); /* Replace with actual image URL */
+  }
+  
+  /* Hover Effect - Move the box up and down */
+  .curve:hover {
+    transform: translateY(-10px); /* Box moves up */
+    background-color: #013d79; /* Change background color on hover */
+    color: rgb(235, 229, 229); /* Change text color */
+  }
+  
+  .curve:hover h5 {
+    font-family: 'Allegro', cursive; /* Change heading font style */
+    color: #4e1010; /* Heading color on hover */
+  }
+  
+  .curve:hover p {
+    font-family: 'Garamond', serif; /* Change paragraph font style */
+    color: #bd4d4d; /* Text color on hover */
+  }
+  
+  /* Heading inside each curve box */
+  .curve h5 {
+    font-family: 'Allegro', cursive;
+    color: #013d79; /* Initial heading color */
+    margin-bottom: 10px;
+    font-size: 1.3rem; /* Adjust font size */
+  }
+  
+  /* Paragraph text inside each curve box */
+  .curve p {
+    font-family: 'Garamond', serif;
+    color: #333; /* Initial text color */
+    margin-top: 0; /* Remove top margin */
+    flex-grow: 0.5; /* Allow the paragraph to take up available space */
+  margin-bottom: 0; /* Remove bottom margin */
+  }
+  
+
+  
+  /* Mobile View: Bootstrap Media Queries */
+  @media (max-width: 768px) {
+    .curve-boxes {
+      flex-direction: column; /* Stack boxes vertically on small screens */
+    }
+  
+    .curve {
+      width: 100%; /* Make each box take full width on mobile */
+      margin-bottom: 20px;
+    }
+  
+    .contact-form {
+      margin-top: 30px;
+    }
+  
+    .service-img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
