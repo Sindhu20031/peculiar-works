@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer style={styles.footer}>
-      <p style={styles.text}>&copy; 2024 All Rights Reserved. peculiarworkes.in.</p>
+      <p style={styles.text}>&copy; 2024 All Rights Reserved. peculiarworks.in.</p>
     </footer>
   );
 };
