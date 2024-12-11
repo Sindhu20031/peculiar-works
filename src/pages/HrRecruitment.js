@@ -1,8 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/HRRecruitment.css"; // Ensure this is a separate CSS file for HR Recruitment
+import emailjs from "emailjs-com"; // Import EmailJS
 
 const HRRecruitment = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    query: "",
+  });
+
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const emailData = {
+      ...formData,
+      source_page: "HRRecruitmentPage", // Specify the source page
+    };
+
+    try {
+      // Send email to Peculiarworks10@gmail.com using EmailJS
+      const response = await emailjs.send(
+        "service_r8ofot9",    // Your EmailJS service ID
+        "template_1ofgr1q",   // Your EmailJS template ID
+        emailData,            // Form data (user's name, email, phone, query)
+        "uCCVifAIEZ1hJFwCI"   // Your EmailJS user ID (Public Key)
+      );
+
+      if (response.status === 200) {
+        setStatusMessage("Your query has been submitted successfully!");
+      } else {
+        setStatusMessage("Error: Unable to submit your query.");
+      }
+
+      // Reset the form fields after submitting
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        query: "",
+      });
+
+      // Clear the status message after 3 seconds
+      setTimeout(() => {
+        setStatusMessage("");  // Clear status message
+      }, 3000);
+
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatusMessage("Error: Please try again later.");
+    }
+  };
+
   return (
     <div className="container mt-5">
       {/* HR Recruitment Intro Section */}
@@ -13,22 +69,58 @@ const HRRecruitment = () => {
         </p>
       </div>
 
-      <div className="contact-image-form-box d-flex justify-content-between align-items-start">
-  <div className="contact-image">
-    <img src="https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1582195753/1582195751.jpg" alt="HR Image" className="img-fluid" />
-  </div>
-  <div className="contact-form">
-    <h4>Your Query Here!</h4>
-    <form>
-      <input type="text" className="form-control mb-3 contact-input" placeholder="Peculiar Works" />
-      <input type="email" className="form-control mb-3 contact-input" placeholder="Peculiarworks10@gmail.com" />
-      <input type="tel" className="form-control mb-3 contact-input" placeholder="Your Phone" />
-      <textarea className="form-control mb-3 message-box contact-input" placeholder="Your Message"></textarea>
-      <button type="submit" className="btn btn-primary w-50">Submit Query</button>
-    </form>
-  </div>
-</div>
+      <div className="contact-image-form-box d-flex justify-content-center align-items-start">
+        <div className="contact-image mb-3 d-flex justify-content-center">
+          <img
+            src="https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1582195753/1582195751.jpg"
+            alt="HR Image"
+            className="img-fluid"
+          />
+        </div>
+        <div className="contact-form">
+          <h4>Your Note Here!</h4>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              className="form-control mb-3 contact-input"
+              placeholder="Peculiar Works"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              className="form-control mb-3 contact-input"
+              placeholder="Peculiarworks10@gmail.com"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              className="form-control mb-3 contact-input"
+              placeholder="+91 73864 67826"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="query"
+              className="form-control mb-3 message-box contact-input"
+              placeholder="Your Note Here...."
+              value={formData.query}
+              onChange={handleChange}
+              required
+            ></textarea>
+            <button type="submit" className="btn btn-primary w-50">Submit Note</button>
+          </form>
 
+          {statusMessage && <p className="status-message">{statusMessage}</p>}
+        </div>
+      </div>
 
       {/* HR Services (Hiring, Management, Administration) */}
       <div className="row mt-5">
@@ -82,38 +174,67 @@ const HRRecruitment = () => {
 
         {/* Advanced HR Tools (Rectangle Boxes) */}
         <div className="row mt-4">
-  <div className="col-md-12">
-    <div className="advanced-tool-box" style={{ backgroundImage: "url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA5L2dyYWRpYW50LWV5LTAwNjQuanBn.jpg')" }}>
-      <h5>Talent Acquisition Strategies</h5>
-      <p>Implementing tailored strategies to source, screen, and hire top candidates quickly.</p>
-    </div>
-  </div>
-  <div className="col-md-12">
-    <div className="advanced-tool-box" style={{ backgroundImage: "url('https://t4.ftcdn.net/jpg/01/65/57/99/360_F_165579913_iKCclaAFxRoSrKZIRg08dWCE2iNZGk8o.jpg')" }}>
-      <h5>Employee Development Programs</h5>
-      <p>Providing training and development plans that improve employee skills and satisfaction.</p>
-    </div>
-  </div>
-  <div className="col-md-12">
-    <div className="advanced-tool-box" style={{ backgroundImage: "url('https://t4.ftcdn.net/jpg/04/89/74/49/360_F_489744918_5rICFzG8fvHdLebXYw9JfsKxW28iU3EN.jpg')" }}>
-      <h5>Compliance and Legal Assistance</h5>
-      <p>Ensuring all HR processes meet legal standards and industry regulations.</p>
-    </div>
-  </div>
-  <div className="col-md-12">
-    <div className="advanced-tool-box" style={{ backgroundImage: "url('https://static.vecteezy.com/system/resources/previews/002/393/823/non_2x/gradient-blue-background-free-vector.jpg')" }}>
-      <h5>Performance Management</h5>
-      <p>Tracking employee performance to identify growth opportunities and areas for improvement.</p>
-    </div>
-  </div>
-  <div className="col-md-12">
-    <div className="advanced-tool-box" style={{ backgroundImage: "url('https://t4.ftcdn.net/jpg/02/94/11/13/360_F_294111387_577OL7DUxO84ptyyvMCo2z6Ul9WVuiyp.jpg')" }}>
-      <h5>HR Analytics</h5>
-      <p>Leveraging data to make informed decisions about hiring, employee retention, and workforce planning.</p>
-    </div>
-  </div>
-</div>
-
+          <div className="col-md-12">
+            <div
+              className="advanced-tool-box"
+              style={{
+                backgroundImage:
+                  "url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA5L2dyYWRpYW50LWV5LTAwNjQuanBn.jpg')",
+              }}
+            >
+              <h5>Talent Acquisition Strategies</h5>
+              <p>Implementing tailored strategies to source, screen, and hire top candidates quickly.</p>
+            </div>
+          </div>
+          <div className="col-md-12">
+            <div
+              className="advanced-tool-box"
+              style={{
+                backgroundImage:
+                  "url('https://t4.ftcdn.net/jpg/01/65/57/99/360_F_165579913_iKCclaAFxRoSrKZIRg08dWCE2iNZGk8o.jpg')",
+              }}
+            >
+              <h5>Employee Development Programs</h5>
+              <p>Providing training and development plans that improve employee skills and satisfaction.</p>
+            </div>
+          </div>
+          <div className="col-md-12">
+            <div
+              className="advanced-tool-box"
+              style={{
+                backgroundImage:
+                  "url('https://t4.ftcdn.net/jpg/04/89/74/49/360_F_489744918_5rICFzG8fvHdLebXYw9JfsKxW28iU3EN.jpg')",
+              }}
+            >
+              <h5>Compliance and Legal Assistance</h5>
+              <p>Ensuring all HR processes meet legal standards and industry regulations.</p>
+            </div>
+          </div>
+          <div className="col-md-12">
+            <div
+              className="advanced-tool-box"
+              style={{
+                backgroundImage:
+                  "url('https://static.vecteezy.com/system/resources/previews/002/393/823/non_2x/gradient-blue-background-free-vector.jpg')",
+              }}
+            >
+              <h5>Performance Management</h5>
+              <p>Tracking employee performance to identify growth opportunities and areas for improvement.</p>
+            </div>
+          </div>
+          <div className="col-md-12">
+            <div
+              className="advanced-tool-box"
+              style={{
+                backgroundImage:
+                  "url('https://t3.ftcdn.net/jpg/03/02/04/06/360_F_302040655_IEH9RyDlu7LL8YCLjgL1IskhrpOlmlSv.jpg')",
+              }}
+            >
+              <h5>HR Analytics</h5>
+              <p>Leveraging data to make informed decisions about hiring, employee retention, and workforce planning.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,72 +1,178 @@
 /* General Styles */
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-  }
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
   
-  /* Navbar Container */
-  .navbar {
-    background-color: #e5e4e2; /* Ash color for navbar background */
-    padding: 0.5rem 0;
-    z-index: 1030;
-  }
+}
+/* Navbar CSS to remove the focus and background from the toggler button */
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* Navbar Container */
+.navbar {
+  background-color: #fefefdf1 !important; /* Ash color for navbar background */
+  padding: 0.5rem 0;
+  z-index: 1030;
+  position: fixed;
+  width: 100%;
   
-  /* Brand Styling */
-  .navbar-brand {
-    font-size: 1.8rem;
-    font-family: "Garamond", serif; /* Garamond font for the company name */
-    color: black;
-    font-weight: bold;
-  }
   
-  /* Navbar Links */
-  .nav-link {
-    font-size: 1rem;
-    font-weight: 500;
-    color: black;
-    text-decoration: none;
-    margin-left: 1rem;
-  }
-  
-  .nav-link.active {
-    text-decoration: underline; /* Underline for active link */
-    color: black;
-  }
-  
-  .nav-link:hover {
-    text-decoration: underline;
-    color: gray;
-  }
-  
-  /* Hamburger Menu Styling */
+}
+.navbar-toggler-icon {
+  background-color: rgb(240, 231, 231); /* Ensure hamburger icon is visible */
+}
+
+
+
+
+
+
+
+
+
+
+.navbar-brand {
+  font-family: 'Candice LJ', cursive; /* Applying Candice LJ font */
+  font-weight: bold; /* Make it bold */
+  font-size: 1.4rem; /* Adjust size as needed */
+  color: black; /* Text color */
+}
+
+
+
+
+
+
+/* Navbar Links */
+.nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.nav-link.active {
+  color: black;
+}
+
+.nav-link:hover {
+  color: gray; /* Change the color when hovered */
+  text-decoration: none;
+}
+
+/* Dropdown Menu Styling */
+.nav-item.dropdown:hover > .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
+.navbar-nav .dropdown-menu {
+  background-color: #fefefdf1 !important; /* Same as navbar background */
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none; /* Hide dropdown by default */
+  padding: 10px 0;
+  border-radius: 4px;
+}
+
+.navbar-nav .dropdown-item {
+  color: black;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Dropdown Item Hover Effect */
+.navbar-nav .dropdown-item:hover {
+  color: #7e8082; /* Change text color to blue when hovered */
+  background-color: transparent !important; /* Prevent background color change */
+} 
+
+/* Services Dropdown */
+.nav-item.dropdown#servicesDropdown:hover > .dropdown-menu {
+  display: block; /* Show Services dropdown on hover */
+}
+
+/* About Us Dropdown */
+.nav-item.dropdown#aboutDropdown:hover > .dropdown-menu {
+  display: block; /* Show About Us dropdown on hover */
+}
+
+/* Hamburger Menu Styling */
 .navbar-toggler {
-    border: none; /* Remove default border */
-    background-color: transparent; /* Transparent background for button */
-    position: absolute;
-    top: 15px; /* Position hamburger in top-right corner */
-    right: -60px;
-  }
-  /* Mobile View Navbar */
+  border: none; /* Remove default border */
+  background-color: transparent; /* Transparent background for button */
+  position: absolute;
+  top: 15px; /* Position hamburger in top-right corner */
+  right: -60px;
+}
+
+/* Optional: If you want to remove the shadow effect on mobile */
+.navbar-collapse.show {
+  box-shadow: none !important;
+}
+/* Remove background color for the collapsed navbar */
+.navbar-collapse {
+  background-color: transparent !important;
+}
+
+/* Mobile View Navbar */
 @media (max-width: 768px) {
-    .navbar-nav {
-      display: flex;
-      flex-direction: column; /* Stack menu items vertically */
-      align-items: flex-end; /* Align items to the right */
-      margin-right: 10px; /* Add space on the right */
-    }
-  
-    /* Navbar collapse for mobile */
-    .navbar-collapse {
-      justify-content: flex-end; /* Align the collapse items to the right */
-    }
-  
-    .navbar-toggler-icon {
-      background-color: rgb(240, 231, 231); /* Ensure hamburger icon is visible */
-    }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: flex-end; /* Align items to the right */
+    margin-right: 10px; /* Add space on the right */
   }
-  
-  /* Show the menu items when hamburger is clicked */
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px; /* Space between mobile menu items */
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end; /* Align the collapse items to the right */
+  }
+
+  .navbar-toggler-icon {
+    background-color: transparent/* Ensure hamburger icon is visible */
+  }
+
+  /* Mobile menu items expanded view */
   .navbar-collapse.collapse.show {
     display: block !important; /* Force the navbar to show */
   }
+
+  /* Mobile Dropdown Styling */
+  .navbar-nav .dropdown-menu {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    box-shadow: none; /* Remove shadow on mobile */
+    border: none; /* Remove border on mobile */
+    display: none; /* Hide dropdowns by default */
+  }
+
+  .navbar-nav .dropdown-item {
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    text-align: right; /* Align dropdown items to the right on mobile */
+  }
+
+  /* Toggle dropdown menu visibility on click */
+  .navbar-nav .dropdown.active > .dropdown-menu {
+    display: block; /* Show dropdown when active */
+  }
+}
+
+/* Ensure navbar items are aligned correctly */
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right by default */
+}
+
+.navbar-nav .nav-item {
+  padding: 0 10px;
+}

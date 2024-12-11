@@ -1,8 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/BrandingSolutions.css"; // Ensure this CSS file exists
+import emailjs from "emailjs-com"; // Import EmailJS
 
 const BrandingSolutions = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    query: "",
+  });
+
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const emailData = {
+      ...formData,
+      source_page: "BrandingSolutionsPage", // Specify the source page
+    };
+
+    try {
+      // Send email to Peculiarworks10@gmail.com using EmailJS
+      const response = await emailjs.send(
+        "service_r8ofot9",    // Your EmailJS service ID
+        "template_1ofgr1q",   // Your EmailJS template ID
+        emailData,            // Form data (user's name, email, phone, query)
+        "uCCVifAIEZ1hJFwCI"   // Your EmailJS user ID (Public Key)
+      );
+
+      if (response.status === 200) {
+        setStatusMessage("Your query has been submitted successfully!");
+      } else {
+        setStatusMessage("Error: Unable to submit your query.");
+      }
+
+      // Reset the form fields after submitting
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        query: "",
+      });
+
+      // Clear the status message after 3 seconds
+      setTimeout(() => {
+        setStatusMessage("");  // Clear status message
+      }, 3000);
+
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatusMessage("Error: Please try again later.");
+    }
+  };
+
   return (
     <div className="container mt-5">
       {/* Branding Solutions Intro Section */}
@@ -33,22 +89,56 @@ const BrandingSolutions = () => {
         {/* Right Side: Contact Form (Without Box) */}
         <div className="col-md-6">
           <div className="contact-form">
-            <h4>Contact Us</h4>
-            <form>
+            <h4>Your Note Here!</h4>
+            <form onSubmit={handleSubmit}>
               <div className="input-group">
-                <input type="text" className="form-control" placeholder="Name" required />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Peculiar Works"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="form-control"
+                  required
+                />
               </div>
               <div className="input-group">
-                <input type="email" className="form-control" placeholder="Email" required />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Peculiarworks10@gmail.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="form-control"
+                  required
+                />
               </div>
               <div className="input-group">
-                <input type="tel" className="form-control" placeholder="Phone Number" required />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="73864 67826"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="form-control"
+                  required
+                />
               </div>
               <div className="input-group">
-                <textarea className="form-control" placeholder="Your Message" required></textarea>
+                <textarea
+                  name="query"
+                  placeholder="Your Note Here...."
+                  value={formData.query}
+                  onChange={handleChange}
+                  className="form-control"
+                  required
+                ></textarea>
               </div>
-              <button type="submit" className="btn btn-warning submit-btn">Submit</button>
+              <button type="submit" className="btn btn-warning submit-btn">
+                Submit Note
+              </button>
             </form>
+            {statusMessage && <p className="status-message">{statusMessage}</p>}
           </div>
         </div>
       </div>
@@ -68,15 +158,12 @@ const BrandingSolutions = () => {
         </div>
       </div>
 
-            {/* Branding Techniques Section with Circles */}
-        <div className="branding-techniques text-center">
+      {/* Branding Techniques Section with Circles */}
+      <div className="branding-techniques text-center">
         <h3 className="heading">Utilizing Modern Techniques and Strategies for Branding</h3>
         <p className="subheading">
-            We combine creativity and strategy to deliver high-quality branding solutions that elevate your business. Our approach includes:
+          We combine creativity and strategy to deliver high-quality branding solutions that elevate your business. Our approach includes:
         </p>
-        </div>
-
-
         <div className="circle-boxes">
           <div className="circle">
             <h5>Strategic Brand Development</h5>
@@ -100,7 +187,7 @@ const BrandingSolutions = () => {
           </div>
         </div>
       </div>
-    
+    </div>
   );
 };
 

@@ -2,6 +2,7 @@
 .hr-recruitment-intro h1 {
     font-family: 'Steamers', cursive;
     color: #013d79;
+    margin-top: 0rem;
   }
   
   .hr-recruitment-intro p {
@@ -47,6 +48,8 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     animation: slideIn 1s ease-in-out; /* Animation for the entire box */
+    
+    
   }
   
   .contact-image {
@@ -55,6 +58,8 @@
     align-items: center; /* Centers the image vertically within the container */
     flex: 1;
     height: 100%; /* Ensures that the image container takes up full height of the box */
+    margin-top: 80px;
+    
   }
   
   .contact-image img {
@@ -260,4 +265,31 @@
       font-size: 0.9rem;
     }
   }
-  
+  /* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+  .contact-image-form-box {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 15px;
+  }
+
+  .contact-image {
+    margin-bottom: 15px; /* Add space below the image */
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: auto;
+  }
+
+  .contact-image img {
+    max-width: 100%; /* Ensure the image fits well on mobile */
+    height: auto;
+  }
+
+  .contact-form {
+    max-width: 100%; /* Allow form to take full width */
+    margin-left: 0.2rem; /* Remove left margin */
+    text-align: center;
+    width: 110%;
+  }
+}

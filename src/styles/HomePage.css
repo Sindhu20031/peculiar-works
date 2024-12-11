@@ -1,0 +1,162 @@
+/* Main Container for Homepage */
+.homepage-container {
+  background-color: rgb(246, 244, 242) !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #f6efef;
+  overflow: hidden; /* Prevent scrolling */
+  z-index: 1; /* Ensure content stays on top of the video */
+  padding-top: 1rem;
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+ /* Adjust header spacing and alignment */
+ .navbar {
+  z-index: 3; /* Ensure it stays above the video */
+  position: relative; /* Prevent overlapping issues */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a translucent background */
+  width: 100%;
+}
+
+
+/* Background Video */
+.homepage-container .background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1; /* Place the video behind content */
+  pointer-events: none;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Centered Text Section */
+.text-center {
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Homepage Heading */
+.homepage-heading {
+  font-family: "Great Vibes", cursive;
+  font-weight: bold;
+  font-size: 3rem; /* Adjust size for desktop */
+  color: #f1eeee;
+  
+  margin-top: 6rem;
+  margin-bottom: 5.5rem;
+}
+
+/* Homepage Description */
+/* Homepage Description */
+.homepage-description {
+  font-size: 1.2rem; /* Adjust font size as needed */
+  line-height: 2; /* Space between lines */
+  font-family: "Lucida Handwriting", cursive; /* Font style */
+  color: rgb(244, 244, 248); /* Text color */
+  text-align: center; /* Center-align the text */
+  width: 60%; /* Adjust width for proper layout */
+  margin: 0 auto; /* Horizontally center within the container */
+  position: relative; /* Position adjustment */
+  top: 50%; /* Vertically center */
+  transform: translateY(-50%); /* Precise vertical centering */
+  text-indent: 2rem; /* Add indentation to the first line */
+  margin-bottom: 2rem;
+}
+
+
+
+
+/* Highlight Blinking Effect */
+.highlight {
+  animation: blinkText 1.5s infinite;
+}
+
+@keyframes blinkText {
+  0%, 100% {
+    color: #ad984b;
+  }
+  50% {
+    color: #c7bb96;
+  }
+}
+
+/* Buttons Section */
+.btn-custom {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  width: 13%;
+}
+
+.btn-custom-white {
+  background-color: #f4ebeb;
+  color: #333;
+}
+
+.btn-custom-white:hover {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.btn-custom-orange {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+.btn-custom-orange:hover {
+  background-color: #ff8c00;
+}
+
+/* Responsive Styling for Mobile View */
+@media (max-width: 768px) {
+  /* Adjust container padding and margins */
+  .homepage-container {
+    padding-top: 0rem;
+    margin-top: 1.7rem;
+  }
+
+  /* Heading adjustments */
+  .homepage-heading {
+    font-size: 2rem;
+    margin-bottom: 7rem;
+  }
+
+  /* Description adjustments */
+  .homepage-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    width: 90%; /* Fit content to smaller screens */
+    text-indent: 1rem; /* Smaller indentation */
+  }
+
+  /* Button adjustments */
+  .d-flex {
+    flex-direction: row; /* Keep buttons side by side */
+    justify-content: center; /* Center-align buttons */
+    gap: 1rem; /* Space between buttons */
+  }
+
+  .btn-custom {
+    width: auto; /* Adjust button size dynamically */
+    font-size: 1rem; /* Keep text readable */
+    padding: 0.8rem; /* Adequate padding */
+    margin-top: -3.5rem;
+  }
+}

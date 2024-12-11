@@ -3,38 +3,27 @@ import React from "react";
 const Footer = () => {
   return (
     <footer style={styles.footer}>
-      <p>&copy; 2024 Peculiar Works</p>
-      <div style={styles.links}>
-        <a href="https://www.instagram.com/peculiar.works" style={styles.link}>
-          Instagram
-        </a>
-        <a href="https://www.linkedin.com/company/peculiar-works-pvt-ltd/" style={styles.link}>
-          LinkedIn
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=100089590622984" style={styles.link}>
-          Facebook
-        </a>
-      </div>
+      <p style={styles.text}>&copy; 2024 All Rights Reserved. peculiarworkes.in.</p>
     </footer>
   );
 };
 
 const styles = {
   footer: {
-    background: "#000",
-    color: "#fff",
+    background: "#f6efef",
+    color: "black",
     textAlign: "center",
     padding: "1rem",
+    fontSize: "1rem", // Default font size
   },
-  links: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "1rem",
-    marginTop: "0.5rem",
+  text: {
+    margin: 0,
   },
-  link: {
-    color: "#fff",
-    textDecoration: "none",
+  '@media (max-width: 768px)': {
+    footer: {
+      padding: "0.5rem", // Reduced padding for mobile
+      fontSize: "0.9rem", // Slightly smaller font size for mobile
+    },
   },
 };
 

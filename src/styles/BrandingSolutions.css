@@ -1,6 +1,7 @@
 /* Branding Solutions Intro Section */
 .branding-intro {
     margin-bottom: 30px;
+    margin-top: 0rem;
   }
   .brand-heading {
     font-family: 'Allegro', cursive;
@@ -39,8 +40,8 @@
   
   /* Contact Form without Box */
   .contact-form {
-    margin-top: 15px;
-    min-height: 15%;
+    margin-top: 12px;
+    min-height: 13%;
   }
   .contact-form h4 {
     font-family: 'Allegro', cursive;
@@ -49,13 +50,13 @@
     margin-bottom: 20px;
   }
   .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 3px;
   }
   .form-control {
     border-radius: 5px;
   }
   textarea {
-    height: 150px;
+    height: 145px;
   }
   .submit-btn {
     width: 50%;
@@ -176,7 +177,7 @@
   @media (max-width: 480px) {
     .brand-box {
       width: 100%; /* Take full width on very small screens */
-      height: 280px; /* Increase height on very small screens */
+      height: 298px; /* Increase height on very small screens */
     }
   
     .brand-img {
@@ -274,12 +275,15 @@
 /* Responsive Layout */
 @media screen and (max-width: 768px) {
   .circle {
-    width: 180px; /* Smaller circles for mobile */
-    height: 180px;
+    width: 185px; /* Smaller circles for mobile */
+    height: 182px;
+  }
+  .contact-form {
+    margin-top: 30px; /* Add more margin on top to push the form down */
   }
 
   .branding-techniques h3 {
-    font-size: 24px; /* Smaller heading for mobile */
+    font-size: 23px; /* Smaller heading for mobile */
   }
 
   .branding-techniques p {

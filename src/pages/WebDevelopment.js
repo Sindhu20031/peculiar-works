@@ -1,8 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/WebDevelopmentPage.css"; // Make sure this CSS file exists
+import emailjs from "emailjs-com"; // Import EmailJS
 
 const WebDevelopment = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    query: "",
+  });
+
+  const [statusMessage, setStatusMessage] = useState("");
+  const currentScrollPos = window.scrollY; // Save the current scroll position
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const emailData = {
+      ...formData,
+      source_page: "WebDevelopmentPage", // Specify the source page
+    };
+
+    try {
+      // Send email to Peculiarworks10@gmail.com using EmailJS
+      const response = await emailjs.send(
+        "service_r8ofot9",    // Your EmailJS service ID
+        "template_1ofgr1q",   // Your EmailJS template ID
+        emailData,            // Form data (user's name, email, phone, query)
+        "uCCVifAIEZ1hJFwCI"   // Your EmailJS user ID (Public Key)
+      );
+
+      if (response.status === 200) {
+        setStatusMessage("Your query has been submitted successfully!");
+      } else {
+        setStatusMessage("Error: Unable to submit your query.");
+      }
+
+      // Reset the form fields after submitting
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        query: "",
+      });
+
+      // WhatsApp message format
+      const whatsappMessage = `*New Query*\nName: ${formData.name}\nPhone: ${formData.phone}\nQuery: ${formData.query}`;
+      const whatsappUrl = `https://wa.me/7386467826?text=${encodeURIComponent(whatsappMessage)}`;
+
+      // Open the WhatsApp link to send the message to the company's WhatsApp number
+      window.open(whatsappUrl, "_blank");
+      window.scrollTo(0, currentScrollPos); // Restore scroll position after submission
+
+      // Clear the status message after 5 seconds
+      setTimeout(() => {
+        setStatusMessage("");  // Clear status message
+      }, 5000);
+
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setStatusMessage("Error: Please try again later.");
+    }
+  };
+
   return (
     <div className="container mt-5">
       {/* Web Development Heading and Description */}
@@ -32,35 +97,57 @@ const WebDevelopment = () => {
         {/* Right Side Contact Form */}
         <div className="col-md-5">
           <div className="contact-form">
-            <h4>Grab Us!</h4>
-            <form>
+            <h4>Your Note Here!</h4>
+            <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <input
                   type="text"
-                  className="form-control"
+                  name="name"
                   placeholder="Peculiar Works"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="form-control"
                   required
                 />
               </div>
               <div className="mb-3">
                 <input
                   type="email"
-                  className="form-control"
+                  name="email"
                   placeholder="Peculiarworks10@gmail.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="form-control"
+                  required
+                />
+              </div>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="7386467826"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="form-control"
                   required
                 />
               </div>
               <div className="mb-3">
                 <textarea
+                  name="query"
+                  placeholder="Your Note Here...."
+                  value={formData.query}
+                  onChange={handleChange}
                   className="form-control message-box"
-                  placeholder="Your Message"
+                  rows="4"
                   required
                 ></textarea>
               </div>
               <button type="submit" className="btn btn-warning submit-btn">
-                Submit Query
+                Submit Note
               </button>
             </form>
+            {statusMessage && <p className="status-message">{statusMessage}</p>}
           </div>
         </div>
       </div>

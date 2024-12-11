@@ -1,10 +1,36 @@
 .App {
   text-align: center;
 }
+/* App.css or your global CSS file */
+
+/* Ensure the body has the padding to avoid content being hidden behind the fixed navbar */
+body {
+  background-color: white;
+  padding-top: 40px; /* Adjust based on your navbar height */
+  margin: 0;
+}
+
+/* Ensure the Contact Us section has the proper margin to not go behind the navbar */
+#contact-us {
+  scroll-margin-top: 80px; /* Adjust based on your navbar height */
+}
+
+/* Styling for the navbar if it's fixed at the top */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+body {
+  background-color: white; /* Apply white background globally */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,4 +61,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} 

@@ -4,6 +4,7 @@
     font-family: 'Allegro', cursive;
     color: #013d79;
     margin-bottom: 20px;
+    margin-top: 0rem;
   }
   .row {
     display: flex;
@@ -108,7 +109,7 @@
     background-color: #f8f9fa;
     padding: 30px;
     border-radius: 25px;
-    width: 17.3%;
+    width: 18%;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease; /* Smooth transition for hover effect */
@@ -116,16 +117,17 @@
     display: flex;
     flex-direction: column; /* Stack elements vertically */
   justify-content: space-between; /* Distribute space between the heading and text */
-  height: 330px;
+  height: 300px;
   }
   
   /* Cutting-Edge Technology Section Heading */
 .cutting-edge h3 {
     font-family: 'Galliard BT', serif; /* Set the font style to Galliard BT */
-    color: #0b3f73; /* Blue color for the heading */
+    color: #0554a2; /* Blue color for the heading */
     text-align: center; /* Center align the heading */
     margin-bottom: 20px; /* Add some space below the heading */
-    font-size: 2rem; /* Adjust font size as needed */
+    font-size: 3rem; /* Adjust font size as needed */
+    font-weight: bolder;
   }
   
   /* Cutting-Edge Technology Section Text */
@@ -142,57 +144,101 @@
 
   /* Add different background images to each box */
   .curve:nth-child(1) {
-    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210918/pngtree-cream-texture-light-champagne-realistic-style-simple-background-image_902979.png'); /* Replace with actual image URL */
+    background-image: url('https://img.freepik.com/free-vector/flat-gamer-room-illustration_23-2148955229.jpg'); /* Replace with actual image URL */
   }
   
   .curve:nth-child(2) {
-    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210918/pngtree-cream-texture-light-champagne-realistic-style-simple-background-image_902979.png'); /* Replace with actual image URL */
+    background-image: url('https://img.freepik.com/free-vector/banner-speed-motion-background-with-fast-speedometer-car-racing-velocity-background_60438-2069.jpg'); /* Replace with actual image URL */
   }
   
   .curve:nth-child(3) {
-    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210918/pngtree-cream-texture-light-champagne-realistic-style-simple-background-image_902979.png'); /* Replace with actual image URL */
+    background-image: url('https://w0.peakpx.com/wallpaper/831/302/HD-wallpaper-seo-concept-search-engine-optimization-marketing-ranking-website-browsing-concept-2635270-vector-art-at-vecteezy.jpg'); /* Replace with actual image URL */
   }
   
   .curve:nth-child(4) {
-    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210918/pngtree-cream-texture-light-champagne-realistic-style-simple-background-image_902979.png'); /* Replace with actual image URL */
+    background-image: url('https://www.shutterstock.com/image-vector/lock-icon-cyber-data-protection-600nw-2471541471.jpg'); /* Replace with actual image URL */
   }
   
   .curve:nth-child(5) {
-    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210918/pngtree-cream-texture-light-champagne-realistic-style-simple-background-image_902979.png'); /* Replace with actual image URL */
+    background-image: url('https://png.pngtree.com/background/20210706/original/pngtree-blue-business-technology-products-tenders-album-cover-vector-background-material-picture-image_54688.jpg'); /* Replace with actual image URL */
   }
-  
+  /* Add different background images to each box with a light overlay */
+.curve:nth-child(1),
+.curve:nth-child(2),
+.curve:nth-child(3),
+.curve:nth-child(4),
+.curve:nth-child(5) {
+  background-size: cover; /* Ensure the image covers the entire box */
+  background-position: center; /* Centers the background image */
+  position: relative; /* Allows for text positioning on top */
+  color: rgb(243, 230, 230); /* Set text color to white for visibility */
+  padding: 20px; /* Optional: Adjust padding as needed */
+  overflow: hidden; /* Prevent any overflow of background image */
+  font-weight: bolder;
+}
+
+/* Add a light overlay effect to make the images appear lighter */
+.curve:nth-child(1)::before,
+.curve:nth-child(2)::before,
+.curve:nth-child(3)::before,
+.curve:nth-child(4)::before,
+.curve:nth-child(5)::before {
+  content: ""; /* Add content for pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(238, 233, 233, 0.4); /* Light white overlay */
+  z-index: 1; /* Ensure overlay appears above the background but below the text */
+}
+
+/* Optional: Add a shadow to text for better visibility */
+.curve h2,
+.curve p,
+.curve h5 {
+  text-shadow: 2px 2px 4px rgba(249, 248, 248, 0.5); /* Add text shadow for better contrast */
+}
+
+
+
   /* Hover Effect - Move the box up and down */
   .curve:hover {
     transform: translateY(-10px); /* Box moves up */
-    background-color: #013d79; /* Change background color on hover */
+    background-color: #f3f6f9; /* Change background color on hover */
     color: rgb(235, 229, 229); /* Change text color */
   }
   
   .curve:hover h5 {
     font-family: 'Allegro', cursive; /* Change heading font style */
-    color: #4e1010; /* Heading color on hover */
+    color: #f9fcf9; /* Heading color on hover */
+    font-weight: bold;
   }
   
   .curve:hover p {
-    font-family: 'Garamond', serif; /* Change paragraph font style */
-    color: #bd4d4d; /* Text color on hover */
+    font-family: 'Garamond', serif;   /* Change paragraph font style */
+    color: #eae7ef; /* Text color on hover */
+    font-weight: bolder;
   }
   
   /* Heading inside each curve box */
   .curve h5 {
     font-family: 'Allegro', cursive;
-    color: #013d79; /* Initial heading color */
+    color: #eff1f4; /* Initial heading color */
     margin-bottom: 10px;
     font-size: 1.3rem; /* Adjust font size */
+    font-weight: bolder;
   }
   
   /* Paragraph text inside each curve box */
   .curve p {
     font-family: 'Garamond', serif;
-    color: #333; /* Initial text color */
+    color: #efe9e9; /* Initial text color */
     margin-top: 0; /* Remove top margin */
     flex-grow: 0.5; /* Allow the paragraph to take up available space */
   margin-bottom: 0; /* Remove bottom margin */
+  font-weight: bolder;
+  font-size: larger;
   }
   
 
