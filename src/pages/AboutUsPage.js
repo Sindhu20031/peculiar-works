@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "../styles/AboutUsPage.css"; // External CSS for styling
 import "bootstrap/dist/css/bootstrap.min.css"; // Bootstrap CSS
-import { Link } from "react-scroll"; 
 
 const AboutUsPage = () => {
   useEffect(() => {
@@ -26,7 +25,14 @@ const AboutUsPage = () => {
       <div className="row align-items-center aboutUsContainer">
         {/* Video Section */}
         <div className="col-md-6 videoContainer">
-          <video autoPlay loop muted className="aboutUsVideo">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            className="aboutUsVideo"
+            preload="auto" // Preload the video for smoother playback
+          >
             <source src="/images/Ab.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -44,7 +50,7 @@ const AboutUsPage = () => {
       </div>
 
       {/* Our Clients Section */}
-      <div id="ourClients" className="clientsSection mt-5"> {/* Added id here */}
+      <div id="ourClients" className="clientsSection mt-5">
         <h2 className="clientsHeading text-center">Our Clients</h2>
         <div className="logoContainer d-flex justify-content-center">
           <img
@@ -52,6 +58,21 @@ const AboutUsPage = () => {
             alt="Client Logo"
             className="clientLogo"
           />
+        </div>
+      </div>
+
+      {/* Our Influencers Section */}
+      <div id="ourInfluencers" className="influencersSection mt-5">
+        <h2 className="influencersHeading text-center mb-4">OUR INFLUENCERS</h2>
+        <div className="d-flex justify-content-center">
+          <div className="influencerCard text-center">
+            <img
+              src="/images/singh.jpg" // Add the path to Deepika Singh's image
+              alt="Deepika Singh"
+              className="influencerImage"
+            />
+            <h5 className="mt-3">Deepika Singh</h5>
+          </div>
         </div>
       </div>
     </div>

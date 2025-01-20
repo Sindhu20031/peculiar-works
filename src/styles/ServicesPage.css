@@ -12,6 +12,7 @@
   animation: fadeIn 1s ease-in-out;
 }
 
+
 .servicesHeading::after {
   content: "";
   display: block;

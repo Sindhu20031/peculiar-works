@@ -14,12 +14,22 @@ const HomePage = () => {
 
   return (
     <div className="homepage-container">
-      <video autoPlay muted loop className="background-video">
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        className="background-video"
+        preload="auto" 
+        playsInline
+      >
         <source src="/images/121.mp4" type="video/mp4" />
+        <source src="/images/121.webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
 
-      <div className="text-center">
+      {/* Content Over Video */}
+      <div className="text-center content-overlay">
         <h1 className="homepage-heading">TRANSFORM YOUR BUSINESS</h1>
         <p className="homepage-description">
           At <span className="highlight">Peculiar Works</span>, we leverage our expertise in{" "}
@@ -27,7 +37,7 @@ const HomePage = () => {
           <span className="highlight">Website Design</span>, and <span className="highlight">Blogging</span>.
           We develop customized solutions that address the unique challenges of our clients.
         </p>
-        <div className="d-flex justify-content-center mt-4">
+        <div className="homepage-buttons justify-content-center mt-4">
           <button className="btn btn-custom btn-custom-white mx-2" onClick={handleContactUsClick}>
             Get in Touch
           </button>
@@ -35,6 +45,14 @@ const HomePage = () => {
             Our Services
           </button>
         </div>
+      </div>
+
+      {/* WhatsApp Icon */}
+      <div
+        className="whatsapp-icon"
+        onClick={() => window.open("https://wa.me/917386467826", "_blank")}
+      >
+        <img src="/images/what.png" alt="WhatsApp" />
       </div>
     </div>
   );

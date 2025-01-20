@@ -1,48 +1,43 @@
-import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css"; // Importing Bootstrap styles
-import { Link } from "react-scroll"; // Import Link for smooth scrolling
-import "../styles/Navbar.css"; // Import custom CSS for navbar styling (if needed)
+import React, { useState, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom"; // Use useLocation for detecting route changes
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
-  // State to manage dropdown open/close for Services and About Us
-  const [activeDropdown, setActiveDropdown] = useState(null); // null, 'services', or 'about'
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const location = useLocation(); // useLocation hook to track route changes
 
-  // Function to toggle the dropdown
   const toggleDropdown = (dropdown) => {
-    // If the clicked dropdown is already active, set it to null (close it)
-    if (activeDropdown === dropdown) {
-      setActiveDropdown(null);
-    } else {
-      // If the clicked dropdown is not active, open it by setting the state
-      setActiveDropdown(dropdown);
-    }
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page whenever the route changes
+  }, [location]);
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div className="container">
-         {/* Logo and Brand */}
-         
-{/* Logo and Brand */}
-<a className="navbar-brand d-flex align-items-center" href="/">
-  <img
-    src="/images/z3.png"
-    alt="Logo"
-    style={{ height: "40px", marginRight: "10px" }}
-  />
-  <span
-    style={{
-      fontFamily: '"Lucida Handwriting", cursive',
-      fontSize: '21px',
-      color: 'black', // Adjust the color to match your design
-      whiteSpace: 'nowrap' // Prevent wrapping
-    }}
-  >
-    Peculiar Works
-  </span>
-</a>
+        {/* Logo */}
+        <Link className="navbar-brand d-flex align-items-center" to="/">
+          <img
+            src="/images/z3.png"
+            alt="Logo"
+            style={{ height: "40px", marginRight: "10px" }}
+          />
+          <span
+            style={{
+              fontFamily: '"Lucida Handwriting", cursive',
+              fontSize: "21px",
+              color: "black",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Peculiar Works
+          </span>
+        </Link>
 
-        {/* Hamburger Menu (Mobile View) */}
         <button
           className="navbar-toggler"
           type="button"
@@ -55,128 +50,92 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navbar Links */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             {/* Home Link */}
             <li className="nav-item">
-              <Link
+              <NavLink
                 className="nav-link"
-                to="homepage-container"
-                smooth={true}
-                duration={500}
-                offset={-70} // Offset for fixed navbar
+                to="/"
+                activeClassName="active"
               >
                 Home
-              </Link>
+              </NavLink>
             </li>
 
-            {/* Services Navbar Link */}
+            {/* Services Dropdown */}
             <li
               className={`nav-item dropdown ${activeDropdown === "services" ? "show" : ""}`}
-              onClick={() => toggleDropdown("services")} // Toggle for Services
+              onClick={() => toggleDropdown("services")}
             >
-              <Link
+              <NavLink
                 className={`nav-link dropdown-toggle ${activeDropdown === "services" ? "active" : ""}`}
-                to="pageContainer" // Scroll to the Services section
-                smooth={true}
-                duration={500}
-                offset={-70}
+                to="/services"
                 role="button"
-                aria-expanded={activeDropdown === "services" ? "true" : "false"}
+                aria-expanded={activeDropdown === "services"}
               >
                 Services
-              </Link>
+              </NavLink>
               <ul className={`dropdown-menu ${activeDropdown === "services" ? "show" : ""}`}>
                 <li>
-                  <Link
+                  <NavLink
                     className="dropdown-item"
-                    to="servicesGrid"
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
+                    to="/services/digital-marketing"
+                    activeClassName="active"
                   >
                     Digital Marketing
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link
+                  <NavLink
                     className="dropdown-item"
-                    to="servicesGrid"
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
+                    to="/services/web-development"
+                    activeClassName="active"
                   >
                     Web Development
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link
+                  <NavLink
                     className="dropdown-item"
-                    to="servicesGrid"
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
+                    to="/services/branding-solutions"
+                    activeClassName="active"
                   >
                     Branding Solutions
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link
+                  <NavLink
                     className="dropdown-item"
-                    to="servicesGrid"
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
+                    to="/services/hr-recruitment"
+                    activeClassName="active"
                   >
                     HR Recruitment Solutions
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </li>
 
-            {/* About Us Navbar Link */}
-            <li
-              className={`nav-item dropdown ${activeDropdown === "about" ? "show" : ""}`}
-              onClick={() => toggleDropdown("about")} // Toggle for About Us
-            >
-              <Link
-                className={`nav-link dropdown-toggle ${activeDropdown === "about" ? "active" : ""}`}
-                to="aboutUsPage" // Scroll to the About Us section
-                smooth={true}
-                duration={500}
-                offset={-70}
-                role="button"
-                aria-expanded={activeDropdown === "about" ? "true" : "false"}
+            {/* About Us Link */}
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                to="/about-us"
+                activeClassName="active"
               >
                 About Us
-              </Link>
-              <ul className={`dropdown-menu ${activeDropdown === "about" ? "show" : ""}`}>
-                <li>
-                  <Link
-                    className="dropdown-item"
-                    to="ourClients"
-                    smooth={true}
-                    duration={500}
-                    offset={-70}
-                  >
-                    Our Clients
-                  </Link>
-                </li>
-              </ul>
+              </NavLink>
             </li>
 
             {/* Contact Us Link */}
             <li className="nav-item">
-              <Link
+              <NavLink
                 className="nav-link"
-                to="contact-us-container"
-                smooth={true}
-                duration={500}
-                offset={-70}
+                to="/contact"
+                activeClassName="active"
               >
                 Contact Us
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>

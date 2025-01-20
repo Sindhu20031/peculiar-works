@@ -6,6 +6,7 @@
     "node": "18.x"
   },
   "main": "src/index.js",
+  "homepage": "https://peculiarworks.in",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.7.1",
     "@popperjs/core": "^2.11.8",

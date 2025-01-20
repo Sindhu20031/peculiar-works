@@ -97,7 +97,7 @@ const WebDevelopment = () => {
         {/* Right Side Contact Form */}
         <div className="col-md-5">
           <div className="contact-form">
-            <h4>Your Note Here!</h4>
+            <h4>Contact Us Now!</h4>
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <input
@@ -135,7 +135,7 @@ const WebDevelopment = () => {
               <div className="mb-3">
                 <textarea
                   name="query"
-                  placeholder="Your Note Here...."
+                  placeholder="Your Message Here...."
                   value={formData.query}
                   onChange={handleChange}
                   className="form-control message-box"
@@ -144,7 +144,7 @@ const WebDevelopment = () => {
                 ></textarea>
               </div>
               <button type="submit" className="btn btn-warning submit-btn">
-                Submit Note
+                Submit 
               </button>
             </form>
             {statusMessage && <p className="status-message">{statusMessage}</p>}

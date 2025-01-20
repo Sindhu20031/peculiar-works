@@ -1,292 +1,424 @@
 /* Branding Solutions Intro Section */
 .branding-intro {
-    margin-bottom: 30px;
-    margin-top: 0rem;
+  margin-bottom: 33px;
+  margin-top: 0rem;
+}
+.brand-heading {
+  font-family: "CALISTO MT", serif;
+  color: #013d79;
+  font-size: 2.5rem;
+  margin-bottom: 17px;
+  margin-top: 6px;
+}
+.brand-description {
+  font-family: 'Roboto', sans-serif; /* Sleek, professional font */
+  font-size: 16px; /* Optimal size for desktop */
+  line-height: 1.8; 
+  color: #333;
+  font-size: 1.1rem;
+}
+/* Right Side: Contact Form (Without Box) */
+.contact-form h4 {
+  font-family: 'CALISTO MT', serif; /* Apply CALISTO MT font to the heading */
+  font-weight: bold;
+}
+
+
+/* Logo Designing Box */
+.logo-box {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.logo-box h3 {
+  font-family: "CALISTO MT", serif;
+  color: #013d79;
+  margin-bottom: 15px;
+}
+.logo-box p {
+  font-family: 'Roboto', sans-serif; /* Sleek, professional font */
+  font-size: 16px; /* Optimal size for desktop */
+  line-height: 1.8; 
+  color: #333;
+}
+.service-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  animation: blinkAnimation 1s infinite;
+}
+
+/* Contact Form without Box */
+.contact-form {
+  margin-top: 12px;
+  min-height: 13%;
+}
+.contact-form h4 {
+  font-family: "CALISTO MT", serif;
+  color: #013d79;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.input-group {
+  margin-bottom: 3px;
+}
+.form-control {
+  border-radius: 5px;
+}
+textarea {
+  height: 145px;
+}
+.submit-btn {
+  width: 50%;
+  margin: 0 auto;
+  background-color: #013d79;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 10px;
+  display: block;
+}
+/* Brand Management Section */
+.brand-management {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  padding: 20px;
+  margin-bottom: 40px; /* Adds gap between Brand Management and next section */
+}
+
+/* Brand Management Box */
+.brand-box {
+  width: 80%; /* Default width for larger screens */
+  height: 220px; /* Default height */
+  background-color: transparent;
+  border-radius: 100px; /* Horizontal oval shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #013d79; /* Blue border for the oval box */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation on hover */
+  position: relative;
+  overflow: hidden; /* Prevent text from overflowing */
+}
+
+/* Hover effect for the Brand Box */
+.brand-box:hover {
+  transform: translateY(-10px); /* Moves the box up on hover */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); /* More shadow effect on hover */
+}
+
+/* Image inside the oval box */
+.brand-img {
+  width: 150px; /* Set image size */
+  height: 150px; /* Set image size */
+  border-radius: 100%; /* Circular image */
+  margin-right: 15px;
+  object-fit: cover; /* Ensure the image does not stretch */
+}
+
+/* Heading in Galliard BT font style */
+.brand-box h3 {
+  font-family: "CALISTO MT", serif;
+  color: #013d79;
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 20px;
+  transition: color 0.3s ease; /* Smooth color transition */
+  text-align: left; /* Align text left */
+}
+
+/* Text in Garamond font style */
+.brand-box p {
+  font-family: 'Roboto', sans-serif; /* Sleek, professional font */
+  font-size: 16px; /* Optimal size for desktop */
+  line-height: 1.8; 
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+  word-wrap: break-word; /* Ensure text wraps and doesn't overflow */
+  line-height: 1.5;
+}
+
+/* Hover effect for the text */
+.brand-box:hover h3 {
+  color: #0073e6;
+}
+
+.brand-box:hover p {
+  color: #555;
+}
+
+/* Mobile View for Brand Management Section */
+@media (max-width: 768px) {
+  
+  /* Make the brand box take more space on mobile */
+  .brand-box {
+    width: 150%; /* Increase the width to fit better */
+    height: 285px; /* Increase the height of the box */
+    flex-direction: column; /* Stack the image and text vertically */
+    padding: 20px;
+  }
+  /* Adjust the logo box for mobile */
+  .logo-box {
+    width: 100%; /* Ensure it takes up the full width */
+    height: auto; /* Let the height adjust automatically */
+    padding: 20px;
+    margin-top: -32px; /* Move the entire box up */
+  }
+
+  /* Adjust heading size and position */
+  .logo-box h3 {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+    text-align: center; /* Center align the heading */
+    margin-top: -10px; /* Move the heading upwards */
+  }
+
+  /* Adjust paragraph text */
+  .logo-box p {
+    font-size: 14px; /* Smaller text size */
+    text-align: center; /* Center align the text */
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 10px; /* Add bottom margin for spacing */
+  }
+
+  /* Adjust image size */
+  .logo-box img.service-img {
+    width: 100%; /* Make the image full width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 0; /* Remove extra space above the image */
   }
   .brand-heading {
-    font-family: 'Allegro', cursive;
-    color: #013d79;
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-  }
-  .brand-description {
-    font-family: 'Garamond', serif;
-    color: #333;
-    font-size: 1.1rem;
-  }
+    font-size: 1.8rem;  /* Adjust font size for smaller screens */
+    margin-top: 0;      /* Remove margin-top for mobile */
+    text-align: center; /* Center the text for mobile */
+    width: auto;        /* Remove 100% width to allow text centering */
+    margin-top: -1.6rem;
+    
+}
+
+.brand-description {
+  margin-top: 1.5rem; /* Adjust the top margin */
+  margin-left: -2rem; /* Small space on the left */
+  margin-right: -2rem; /* Small space on the right */
+  font-family: 'Lato', sans-serif;
+
+
+  font-size: 0.9rem; /* Adjust font size */
+  line-height: 1.6; /* Improve line spacing for readability */
   
-  /* Logo Designing Box */
-  .logo-box {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  .logo-box h3 {
-    font-family: 'Allegro', cursive;
-    color: #013d79;
-    margin-bottom: 15px;
-  }
-  .logo-box p {
-    font-family: 'Garamond', serif;
-    color: #333;
-  }
-  .service-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-    animation: blinkAnimation 1s infinite;
-  }
   
-  /* Contact Form without Box */
-  .contact-form {
-    margin-top: 12px;
-    min-height: 13%;
-  }
-  .contact-form h4 {
-    font-family: 'Allegro', cursive;
-    color: #013d79;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-  .input-group {
-    margin-bottom: 3px;
-  }
-  .form-control {
-    border-radius: 5px;
-  }
-  textarea {
-    height: 145px;
-  }
-  .submit-btn {
-    width: 50%;
-    margin: 0 auto;
-    background-color: #013d79;
-    color: white;
-    border-radius: 5px;
-    font-size: 1rem;
-    padding: 10px;
-    display: block;
-  }
-  /* Brand Management Section */
-.brand-management {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    padding: 20px;
-    margin-bottom: 40px; /* Adds gap between Brand Management and next section */
-  }
-  
-  /* Brand Management Box */
-  .brand-box {
-    width: 80%; /* Default width for larger screens */
-    height: 220px; /* Default height */
-    background-color: transparent;
-    border-radius: 100px; /* Horizontal oval shape */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border: 2px solid #013d79; /* Blue border for the oval box */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation on hover */
-    position: relative;
-    overflow: hidden; /* Prevent text from overflowing */
-  }
-  
-  /* Hover effect for the Brand Box */
-  .brand-box:hover {
-    transform: translateY(-10px); /* Moves the box up on hover */
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); /* More shadow effect on hover */
-  }
-  
-  /* Image inside the oval box */
+}
+
+
+
+
+
+
+  /* Adjust image size on mobile */
   .brand-img {
-    width: 150px; /* Set image size */
-    height: 150px; /* Set image size */
-    border-radius: 100%; /* Circular image */
-    margin-right: 15px;
-    object-fit: cover; /* Ensure the image does not stretch */
+    width: 7rem !important; /* Force width to decrease */
+    height: 6rem !important; /* Force height to decrease */
+    margin-right: 0 !important; /* Remove right margin */
+    margin-bottom: -2px !important;  /* Space between image and text */
   }
-  
-  /* Heading in Galliard BT font style */
+
+  /* Adjust heading size on mobile */
   .brand-box h3 {
-    font-family: "Galliard BT", serif;
-    color: #013d79;
-    font-size: 22px;
-    font-weight: bold;
-    margin-right: 20px;
-    transition: color 0.3s ease; /* Smooth color transition */
-    text-align: left; /* Align text left */
+    font-size: 20px; /* Larger heading size */
+    margin-right: 0; /* Remove right margin */
+    text-align: center; /* Center align text on mobile */
+    margin-bottom: -1px; /* Add space between the image and heading */
+    
   }
-  
-  /* Text in Garamond font style */
+
+  /* Adjust paragraph size on mobile */
   .brand-box p {
-    font-family: "Garamond", serif;
-    font-size: 16px;
-    color: #333;
-    text-align: left;
-    word-wrap: break-word; /* Ensure text wraps and doesn't overflow */
-    line-height: 1.5;
+    font-size: 14px; /* Smaller text size */
+    text-align: center; /* Center align text */
   }
   
-  /* Hover effect for the text */
-  .brand-box:hover h3 {
-    color: #0073e6;
+  .circle {
+    width: 240px !important; /* Ensures circle size */
+    height: 240px !important;
+    padding: 20px;
+}
+.branding-techniques .heading {
+  font-size: 1.9rem !important; ; /* Adjust font size to make it fit properly on smaller screens */
+  margin-bottom: 10px; /* Adjust bottom margin for mobile view */
+  text-align: center; /* Center the heading text */
+  text-decoration-color: #013d79; /* Set underline color to match the heading */
+  text-decoration-thickness: 2px; /* Make the underline thicker */
+}
+}
+
+/* Small Screen (Phones) - Compact Adjustments */
+@media (max-width: 480px) {
+  .brand-box {
+    width: 100%; /* Take full width on very small screens */
+    height: 298px; /* Increase height on very small screens */
   }
-  
-  .brand-box:hover p {
-    color: #555;
+
+  .brand-img {
+    width: 140px; /* Larger image */
+    height: 140px;
   }
-  
-  /* Mobile View for Brand Management Section */
-@media (max-width: 768px) {
-    /* Make the brand box take more space on mobile */
-    .brand-box {
-      width: 90%; /* Increase the width to fit better */
-      height: 250px; /* Increase the height of the box */
-      flex-direction: column; /* Stack the image and text vertically */
-      padding: 20px;
-    }
-  
-    /* Adjust image size on mobile */
-    .brand-img {
-      width: 150px; /* Slightly larger image */
-      height: 150px;
-      margin-right: 0; /* Remove right margin */
-      margin-bottom: 15px; /* Space between image and text */
-    }
-  
-    /* Adjust heading size on mobile */
-    .brand-box h3 {
-      font-size: 20px; /* Larger heading size */
-      margin-right: 0; /* Remove right margin */
-      text-align: center; /* Center align text on mobile */
-      margin-bottom: 10px; /* Add space between the image and heading */
-    }
-  
-    /* Adjust paragraph size on mobile */
-    .brand-box p {
-      font-size: 14px; /* Smaller text size */
-      text-align: center; /* Center align text */
-    }
+
+  .brand-box h3 {
+    font-size: 18px; /* Slightly smaller heading */
   }
-  
-  /* Small Screen (Phones) - Compact Adjustments */
-  @media (max-width: 480px) {
-    .brand-box {
-      width: 100%; /* Take full width on very small screens */
-      height: 298px; /* Increase height on very small screens */
-    }
-  
-    .brand-img {
-      width: 140px; /* Larger image */
-      height: 140px;
-    }
-  
-    .brand-box h3 {
-      font-size: 18px; /* Slightly smaller heading */
-    }
-  
-    .brand-box p {
-      font-size: 12px; /* Adjust text size for small screens */
-    }
+
+  .brand-box p {
+    font-size: 12px; /* Adjust text size for small screens */
   }
-  
+}
+
 /* Circle Boxes */
 .circle-boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Ensure spacing between circles */
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px; /* Ensure spacing between circles */
 }
 
 /* Branding Techniques Section Styling */
 .branding-techniques .heading {
-    font-family: 'STEAMER', sans-serif; /* Apply STEAMER font to heading */
-    color: #013d79;/* Blue color for heading */
-    margin-bottom: 20px; /* Adds space between the heading and the text */
-  }
-  
-  .branding-techniques .subheading {
-    font-family: 'Lucida Handwriting', cursive; /* Apply Lucida Handwriting font for text */
-    margin-bottom: 40px; /* Adds gap between the text and the circle boxes */
-  }
-  
+  font-family: 'STEAMER', sans-serif; /* Apply STEAMER font to heading */
+  color: #013d79; /* Blue color for heading */
+  margin-bottom: 20px; /* Adds space between the heading and the text */
+  font-size: 40px;
+  position: relative; /* Set relative positioning for the pseudo-element */
+}
+
+.branding-techniques .heading::after {
+  content: ""; /* Add an empty content block */
+  display: block; /* Make it a block element */
+  width: 70%; /* Set the width of the underline */
+  height: 3px; /* Set the thickness of the underline */
+  background-color: #013d79; /* Match the underline color */
+  margin: 0 auto; /* Center the underline */
+  position: absolute; /* Position relative to the heading */
+  bottom: -5px; /* Space below the text */
+  left: 15%; /* Center align it under the text */
+}
+
+
+
+.branding-techniques .subheading {
+  font-family: 'Poppins', sans-serif; /* Apply Lucida Handwriting font for text */
+  margin-bottom: 40px; /* Adds gap between the text and the circle boxes */
+}
+
 
 .circle {
-  background-color: transparent; /* Remove the background blue */
-  color: #013d79; /* Set circle text color to blue */
-  width: 220px; /* Increase the width of circles */
-  height: 220px; /* Increase the height of circles */
-  border-radius: 50%; /* Make circles */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  border: 2px solid #010102; /* Blue border for circles */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
+background-color: transparent; /* Remove the background blue */
+color: #013d79; /* Set circle text color to blue */
+width: 220px; /* Increase the width of circles */
+height: 220px; /* Increase the height of circles */
+border-radius: 50%; /* Make circles */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 20px;
+border: 2px solid #010102; /* Blue border for circles */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+text-align: center;
 }
 
 .circle h5 {
-  font-family: Geneva, sans-serif; /* Set Geneva font for circle headings */
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #013d79;
+font-family: "CALISTO MT", serif; /* Set Geneva font for circle headings */
+font-size: 20px;
+margin-bottom: 9px;
+color: #013d79;
+font-weight: bold;
 }
 
 .circle p {
-  font-family: Garamond, serif; /* Set Garamond font for circle text */
-  font-size: 14px;
-  color: #0e0f0f; /* Blue text for circle descriptions */
+font-family: Garamond, serif; /* Set Garamond font for circle text */
+font-size: 14px;
+color: #0e0f0f; /* Blue text for circle descriptions */
 }
 
 /* Hover Effect on Circles */
 .circle:hover {
-  transform: scale(1.1); /* Slightly increase size on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+transform: scale(1.1); /* Slightly increase size on hover */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Add background images for each circle */
 .circle:nth-child(1) {
-    background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-130033.jpg'); /* Replace with actual image path */
-  }
-  
-  .circle:nth-child(2) {
-    background-image: url('https://e0.pxfuel.com/wallpapers/986/360/desktop-wallpaper-background-color-4851-background-color-theme-colorful-brown-color.jpg'); /* Replace with actual image path */
-  }
-  
-  .circle:nth-child(3) {
-    background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-130033.jpg'); /* Replace with actual image path */
-  }
-  
-  .circle:nth-child(4) {
-    background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-4174.jpg'); /* Replace with actual image path */
-  }
-  
-  .circle:nth-child(5) {
-    background-image: url('https://img.freepik.com/premium-photo/brown-gold-background-with-white-background_867442-265.jpg'); /* Replace with actual image path */
-  }
+  background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-130033.jpg'); /* Replace with actual image path */
+}
+
+.circle:nth-child(2) {
+  background-image: url('https://e0.pxfuel.com/wallpapers/986/360/desktop-wallpaper-background-color-4851-background-color-theme-colorful-brown-color.jpg'); /* Replace with actual image path */
+}
+
+.circle:nth-child(3) {
+  background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-130033.jpg'); /* Replace with actual image path */
+}
+
+.circle:nth-child(4) {
+  background-image: url('https://img.freepik.com/premium-photo/abstract-background-images-wallpaper-ai-generated_643360-4174.jpg'); /* Replace with actual image path */
+}
+
+.circle:nth-child(5) {
+  background-image: url('https://img.freepik.com/premium-photo/brown-gold-background-with-white-background_867442-265.jpg'); /* Replace with actual image path */
+}
 
 /* Responsive Layout */
 @media screen and (max-width: 768px) {
-  .circle {
-    width: 185px; /* Smaller circles for mobile */
-    height: 182px;
-  }
-  .contact-form {
-    margin-top: 30px; /* Add more margin on top to push the form down */
-  }
-
-  .branding-techniques h3 {
-    font-size: 23px; /* Smaller heading for mobile */
-  }
-
-  .branding-techniques p {
-    font-size: 14px; /* Smaller text for mobile */
-  }
+.circle {
+  width: 185px; /* Smaller circles for mobile */
+  height: 182px;
 }
+.contact-form {
+  margin-top: 30px; /* Add more margin on top to push the form down */
+}
+
+.branding-techniques h3 {
+  font-size: 23px; /* Smaller heading for mobile */
+}
+
+.branding-techniques p {
+  font-size: 14px; /* Smaller text for mobile */
+}
+
+.branding-techniques .circle-boxes {
+  display: flex;
+  flex-direction: column; /* Stack circles vertically on small screens */
+  align-items: center;
+}
+
+.branding-techniques .circle {
+  width: 80%; /* Make each circle smaller on mobile */
+  height: 200px; /* Reduce height of the circle */
+  margin-bottom: 20px; /* Add space between circles */
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  justify-content: center; /* Center text vertically */
+  align-items: center; /* Center text horizontally */
+  text-align: center; /* Center the text */
+  padding: 20px; /* Add padding to prevent text from touching edges */
+  border-radius: 50%; /* Make the box a circle */
+  background-color: #f8f9fa; /* Circle background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a light shadow */
+}
+
+.branding-techniques .circle h5 {
+  font-size: 1.3rem; /* Adjust the heading font size for mobile */
+  margin-bottom: 10px;
+}
+
+.branding-techniques .circle p {
+  font-size: 1rem; /* Adjust the paragraph font size for mobile */
+  margin-top: 0; /* Remove top margin */
+}
+}
+

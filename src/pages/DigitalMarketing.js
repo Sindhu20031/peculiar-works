@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/DigitalMarketingPage.css";
 import emailjs from "emailjs-com"; // Import EmailJS
 
+
 const DigitalMarketingPage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
   const [responseMessage, setResponseMessage] = useState("");
@@ -70,70 +71,75 @@ const DigitalMarketingPage = () => {
           traffic, and boost conversions. Our services include:
         </p>
 
-        {/* SEO and Contact Form Section */}
-        <div className="container mt-5">
-          <div className="row align-items-stretch">
-            {/* SEO Section */}
-            <div className="col-md-6">
-              <div className="info-box">
-                <img
-                  src="https://c1.wallpaperflare.com/preview/24/329/110/seo-optimization-search-engine-optimization-process.jpg"
-                  alt="SEO"
-                  className="info-image img-fluid mb-3"
-                />
-                <h3>SEO (Search Engine Optimization)</h3>
-                <p>
-                  Boost your website's organic rankings with our SEO strategies. We optimize your content,
-                  improve site speed, and implement the latest SEO practices to ensure your website appears
-                  at the top of search engine results.
-                </p>
-              </div>
-            </div>
+      {/* Contact Form Section */}
+<div className="container mt-5">
+  <div className="row align-items-stretch">
+    {/* SEO Section */}
+    <div className="col-12 col-md-6 mb-4">
+      <div className="info-box">
+        <img
+          src="/images/SEO.jpeg"
+          alt="SEO"
+          className="info-image img-fluid mb-3"
+        />
+        <h3>SEO (Search Engine Optimization)</h3>
+        <p>
+          Boost your website's organic rankings with our SEO strategies. We optimize your content,
+          improve site speed, and implement the latest SEO practices to ensure your website appears
+          at the top of search engine results.
+        </p>
+      </div>
+    </div>
 
-            {/* Contact Form Section */}
-            <div className="col-md-6">
-              <div className="contact-form">
-                <h2>Your Note Here!</h2>
-                <form onSubmit={handleSubmit}>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Peculiar Works"
-                    required
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Peculiarworks10@gmail.com"
-                    required
-                  />
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="73864 67826"
-                    required
-                  />
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Your Note Here...."
-                    rows="4"
-                    required
-                  ></textarea>
-                  <button type="submit">Submit Note</button>
-                  {responseMessage && <p className="mt-3 response-message">{responseMessage}</p>}
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+    {/* Contact Form Section */}
+    <div className="col-12 col-md-6">
+      <div className="contact-form">
+        <h2>Contact Us Now!</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Peculiar Works"
+            required
+            className="form-control mb-3 w-100"  // Ensure full width for mobile
+          />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Peculiarworks10@gmail.com"
+            required
+            className="form-control mb-3 w-100"  // Ensure full width for mobile
+          />
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="73864 67826"
+            required
+            className="form-control mb-3 w-100"  // Ensure full width for mobile
+          />
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Your Message Here...."
+            rows="4"
+            required
+            className="form-control mb-3 w-100"  // Ensure full width for mobile
+          ></textarea>
+          <button type="submit" className="btn btn-primary w-100">Submit </button>  {/* Full-width button for mobile */}
+          {responseMessage && <p className="mt-3 response-message">{responseMessage}</p>}
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 
         {/* Three Horizontal Boxes */}
         <div className="row mb-5">

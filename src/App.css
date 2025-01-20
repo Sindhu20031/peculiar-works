@@ -32,6 +32,24 @@ body {
 body {
   background-color: white; /* Apply white background globally */
 }
+.whatsapp-icon {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 60px; /* Set the size of the icon */
+  height: 60px;
+  cursor: pointer;
+}
+
+.whatsapp-icon img {
+  width: 100%; /* Fill the container */
+  height: 100%;
+  border-radius: 50%; /* Ensures the image itself is circular */
+  object-fit: cover; /* Ensures the image scales properly */
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

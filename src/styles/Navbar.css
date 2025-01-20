@@ -176,3 +176,46 @@ body {
 .navbar-nav .nav-item {
   padding: 0 10px;
 }
+/* Large Screen Styling (from 1200px onwards) */
+@media (min-width: 1200px) {
+  /* Make navbar items aligned in a row for larger screens */
+  .navbar-nav {
+    display: flex;
+    flex-direction: row; /* Keep items horizontally aligned */
+    justify-content: space-between; /* Space items out evenly */
+  }
+
+  .navbar-toggler {
+    display: none; /* Hide hamburger menu on larger screens */
+  }
+
+  /* Ensure navbar brand is aligned properly */
+  .navbar-brand {
+    font-size: 1.6rem; /* Increase font size slightly for larger screens */
+  }
+
+  /* Adjust links spacing and size on large screens */
+  .nav-link {
+    font-size: 1.1rem; /* Slightly larger font size for better readability */
+    margin-left: 2rem; /* Increase spacing between links */
+  }
+
+  /* Adjust dropdown menus for better visibility on large screens */
+  .navbar-nav .dropdown-menu {
+    background-color: #fefefdf1 !important;
+    width: auto; /* Adjust dropdown width to auto for more space */
+    padding: 12px 0; /* More padding in the dropdown */
+  }
+
+  .navbar-nav .dropdown-item {
+    font-size: 1.1rem; /* Slightly larger font size for better readability */
+    padding: 12px 25px; /* More padding for dropdown items */
+  }
+
+  /* Adjust navbar items layout on larger screens */
+  .navbar-nav {
+    display: flex;
+    flex-direction: row; /* Keep navbar items in a row */
+    align-items: center; /* Align items vertically */
+  }
+}

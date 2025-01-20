@@ -18,6 +18,14 @@ const App = () => {
     <Router>
       <Navbar />
       <div style={{ overflowY: "auto" }}>
+        {/* WhatsApp Icon */}
+        <div
+          className="whatsapp-icon"
+          onClick={() => window.open("https://wa.me/917386467826", "_blank")}
+        >
+          <img src="/images/what.png" alt="WhatsApp" />
+        </div>
+
         <Routes>
           {/* HomePage route */}
           <Route

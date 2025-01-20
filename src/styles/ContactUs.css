@@ -1,28 +1,41 @@
+/* Contact Us Container */
 .contact-us-container {
   background-color: #f9f5f5;
   border-radius: 10px;
   padding: 2rem;
   margin-top: 2.0rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
 }
 
+/* Heading Styling */
 .contact-heading {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: bold;
   color: #2321b4;
-}
+  font-family: "CALISTO MT", serif;
+  }
 
+/* Subheading Styling */
 .contact-subheading {
   font-size: 1.2rem;
   color: #666;
   margin-bottom: 1rem;
+  font-family: "CALISTO MT", serif;
+  
+  
 }
 
+/* Image Styling */
 .contact-image {
   max-height: 430px;
   border-radius: 10px;
   width: 100%;
 }
 
+/* Social Links Styling */
 .social-links {
   margin-top: 1rem;
 }
@@ -43,13 +56,44 @@
   color: #0056b3;
 }
 
+/* Paragraph Styling */
 .contact-us-container p {
   font-size: 1rem;
   color: #555;
+  font-family: "CALISTO MT", serif;
 }
 
+/* Icon Styling */
 .contact-us-container i {
   margin-right: 0.5rem;
+}
+
+/* For Larger Screens (Desktops and Larger Laptops) */
+@media (min-width: 1200px) {
+  .contact-us-container {
+    width: 100%;  /* Ensure it doesn't shrink too much */
+    padding: 2rem 4rem; /* Increase padding for larger screens */
+  }
+
+  /* Adjust the heading for larger screens */
+  .contact-heading {
+    font-size: 2.5rem; /* Increase font size */
+  }
+
+  /* Adjust the subheading for larger screens */
+  .contact-subheading {
+    font-size: 1.5rem; /* Increase font size */
+  }
+
+  /* Adjust the image for larger screens */
+  .contact-image {
+    max-height: 500px; /* Increase max height */
+  }
+
+  /* Adjust the social icon size for larger screens */
+  .social-icon {
+    font-size: 1.3rem; /* Increase size */
+  }
 }
 
 

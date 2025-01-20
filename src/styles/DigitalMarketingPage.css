@@ -1,6 +1,6 @@
 /* General Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   margin: 0;
   padding: 0;
   background: #f5f5f5;
@@ -19,16 +19,18 @@ body {
 }
 .contact-form h2 {
   color: #013d79; /* Blue color for the heading */
+  font-size: 2rem !important;
+  
 }
 .col-md-6 {
   padding-top: 0; /* Remove any extra padding that might be pushing the form down */
-  font-family: 'Allegro', cursive;
+  font-family: "CALISTO MT", serif;
   
 }
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 6px;
 }
 
 /* Navbar */
@@ -46,7 +48,7 @@ body {
 
 /* Digital Marketing Page */
 .digital-marketing-page {
-  font-family: 'Arial', sans-serif;
+  font-family: "CALISTO MT", serif;
   background-image: url('https://wallpapers.com/images/featured/blank-white-7sn5o1woonmklx1h.jpg');
   background-size: cover;
   background-position: center;
@@ -63,16 +65,21 @@ h1, h2, h3 {
 
 /* Digital Marketing Page Styles */
 .digital-marketing-heading {
-  font-family: 'Allegro', cursive;
+  font-family: "CALISTO MT", serif;
   color: #013d79;
   margin-bottom: 20px;
   margin-top: -1rem;
 }
 .digital-marketing-page p {
-  font-family: 'Garamond', serif;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.6;
   color: #333;
   font-size: 1.1rem;
+  
+  
 }
+
+
 
 /* Scoped SEO Box Styling */
 .col-md-6 .info-box {
@@ -94,13 +101,13 @@ h1, h2, h3 {
 }
 
 .col-md-6 .info-box h3 {
-  font-family: 'Allegro', cursive;
+  font-family: "CALISTO MT", serif;
   color: #013d79; /* Matching heading color */
   margin-top: 15px; /* Space between image and heading */
 }
 
 .col-md-6 .info-box p {
-  font-family: 'Garamond', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #333; /* Text color */
   font-size: 1.1rem;
   line-height: 1.5; /* Better readability */
@@ -125,14 +132,14 @@ h1, h2, h3 {
 }
 
 .row .col-md-4 .info-box h3 {
-  font-family: 'Allegro', cursive;
+  font-family:  'Libre Franklin', sans-serif;
   color: #013d79; /* Blue color for headings */
   font-size: 1.4rem; /* Slightly larger font size for emphasis */
   margin-bottom: 10px; /* Space below the heading */
 }
 
 .row .col-md-4 .info-box p {
-  font-family: 'Garamond', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #333; /* Text color */
   font-size: 1rem; /* Slightly smaller font size */
   line-height: 1.6; /* Improved readability */
@@ -151,6 +158,9 @@ h1, h2, h3 {
   .row .col-md-4 .info-box p {
     font-size: 0.9rem; /* Slightly smaller text font size */
   }
+  
+  
+  
 }
 
 
@@ -159,26 +169,17 @@ h1, h2, h3 {
   position: relative;
   text-align: center;
   padding: 50px 20px;
-  font-family: 'Garamond', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   min-height: 100vh; /* Ensures the container is at least the height of the viewport */
   overflow: hidden; /* Prevents overflow */
   background-color: rgb(169, 163, 211);
   
 }
 
-.cutting-edge-video-background {
-  visibility: visible;
-  position: absolute; /* Ensure video is positioned behind the content */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the video covers the section */
-  z-index: -1; /* Keeps the video in the background */
-}
+
 
 .cutting-edge-title {
-  font-family: 'Allegro', cursive;
+  font-family: "CALISTO MT", serif;
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #013d79;
@@ -201,11 +202,21 @@ h1, h2, h3 {
   flex-wrap: wrap;
   z-index: 1; /* Ensures list items are above the video */
 }
+.cutting-edge-video-background {
+  visibility: visible;
+  position: absolute; /* Ensure video is positioned behind the content */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the section */
+  z-index: -1; /* Keeps the video in the background */
+}
 
 .cutting-edge-list li {
   background-color: #202121;
   border-radius: 50%;
-  width: 235px;
+  width: 249px;
   height: 240px;
   display: flex;
   flex-direction: column;
@@ -223,13 +234,13 @@ h1, h2, h3 {
 }
 
 .cutting-edge-list li strong {
-  font-family: 'Allegro', cursive;
+  font-family: "CALISTO MT", serif;
   color: #0975e1;
   font-weight: bolder;
 }
 
 .cutting-edge-list li p {
-  font-family: 'Garamond', serif;
+  font-family: 'Source Sans Pro', sans-serif;
   color: #d3d3d3;
   font-size: 1rem;
 }
@@ -237,7 +248,7 @@ h1, h2, h3 {
 /* Contact Form Fields */
 .contact-form input,
 .contact-form textarea {
-  font-family: 'Allegro', cursive; 
+  font-family: "CALISTO MT", serif;
   display: block; /* Ensure elements take the full width */
   width: 100%; /* Full width */
   max-width: 100%; /* Prevent overflow */
@@ -261,7 +272,7 @@ h1, h2, h3 {
 
 /* Textarea Specific Styling */
 .contact-form textarea {
-  height: 150px; /* Optimal height */
+  height: 100px; /* Optimal height */
   resize: vertical; /* Allow resizing only vertically */
 }
 .page-contact .info-box, .page-contact .contact-form {
@@ -275,13 +286,13 @@ h1, h2, h3 {
 .contact-form button {
   background-color: #004080; /* Button background color */
   color: white; /* White text for contrast */
-  padding: 10px 20px; /* Adequate padding */
+  padding: 8px 8px; /* Adequate padding */
   border: none; /* Remove default border */
   border-radius: 5px; /* Rounded corners */
   font-size: 1rem; /* Uniform font size */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
-  font-family: 'Allegro', cursive; 
+  font-family: "CALISTO MT", serif;
 }
 
 .contact-form button:hover {
@@ -319,13 +330,145 @@ h1, h2, h3 {
   animation: fieldSlideIn 0.5s ease-in-out;
 }
 
-/* Responsive Design for Form */
+/* Mobile View - Adjust Widths */
 @media (max-width: 768px) {
-  .contact-form {
-    padding: 15px; /* Adjust padding for smaller screens */
+  /* Ensure the SEO and Contact Form sections take the full width */
+  .col-md-6 {
+    width: 100% !important;  /* Force full width on mobile */
+    padding-left: 0px !important;  /* Remove left padding */
+    padding-right: 0px !important;  /* Remove right padding */
   }
+
+  /* SEO Box */
+  .info-box {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: -17px;
+    
+    
+  }
+  
+  .contact-form h2 {
+    color: #013d79; /* Blue color for the heading */
+    font-size: 1.8rem !important;
+    
+  }
+
+  /* Contact Form */
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Form fields should be full width on mobile */
   .contact-form input,
   .contact-form textarea {
-    font-size: 0.9rem; /* Slightly smaller font size */
+    width: 100%;  /* Ensure inputs fill the width */
+    padding: 15px;  /* Add padding for comfort */
+    font-size: 14px;
+    margin-bottom: 15px; /* Space between fields */
+    box-sizing: border-box;  /* Ensure padding is included in width */
+  }
+
+  .contact-form button {
+    width: 100%;  /* Button takes full width */
+    padding: 18px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px; /* Ensure there's space above the button */
+  }
+
+  /* Text and heading adjustments for better appearance */
+  .digital-marketing-heading {
+    font-size: 2.4rem;
+    margin-top: -51px;  /* Adjusted for mobile spacing */
+  }
+
+  /* Ensure the text container is justified and looks well on mobile */
+  .text-center.mb-5 {
+    margin-top: -41px;
+    text-align: justify;
+    margin-left: -1rem;  /* Increase left margin */
+    margin-right: -1rem;  /* Increase right margin */
+    padding: 10px;  /* Adjust padding for mobile */
+  }
+}
+
+/* For Larger Screens (Laptops and Desktops) */
+@media (min-width: 1200px) {
+  /* Ensure the container doesn't shrink */
+  .contact-form {
+    position: relative;
+    top: 0; /* Reset the position adjustment */
+    width: 100%;
+    padding: 2rem 4rem; /* Increase padding on larger screens */
+  }
+  
+
+  /* Adjust the heading font sizes for larger screens */
+  .contact-form h2 {
+    font-size: 2.5rem; /* Larger heading size for bigger screens */
+  }
+
+  /* Adjust the navbar padding and height for larger screens */
+  .navbar {
+    padding: 10px 20px; /* Adjust padding */
+    height: auto; /* Adjust based on content */
+  }
+
+  /* Adjust the digital marketing background image and padding for larger screens */
+  .digital-marketing-page {
+    padding: 70px 0; /* Increase top and bottom padding */
+  }
+
+  /* Adjust the size of the cutting-edge section for larger screens */
+  .cutting-edge-container {
+    padding: 60px 40px; /* Increase padding */
+    font-size: 1.2rem; /* Adjust font size for better readability */
+  }
+
+  /* Ensure the info-box containers in the .row are full-width on large screens */
+  .row .col-md-4 .info-box {
+    width: 100%; /* Ensures boxes take full width */
+  }
+
+  /* Adjust the size of the cutting-edge list items for larger screens */
+  .cutting-edge-list li {
+    width: 250px; /* Increase size of the circular items */
+    height: 250px; /* Match height with width */
+  }
+}
+
+/* Further Adjustment for Very Large Screens (extra-wide screens) */
+@media (min-width: 1500px) {
+  .contact-form {
+    width: 80%; /* Set width to 80% of the screen for very large screens */
+    margin: 0 auto; /* Center-align the form */
+    padding: 3rem 6rem; /* More padding for extra-large screens */
+  }
+
+  /* Adjust the padding of the navbar */
+  .navbar {
+    padding: 15px 30px; /* Increase navbar padding */
+  }
+
+  /* Adjust the background of the digital marketing page */
+  .digital-marketing-page {
+    padding: 90px 0; /* Further padding adjustments */
+  }
+
+  /* Adjust cutting-edge container font size */
+  .cutting-edge-container {
+    font-size: 1.4rem; /* Adjust for readability on large screens */
+  }
+
+  /* Increase the font-size of headings */
+  .contact-form h2 {
+    font-size: 3rem; /* Adjust heading size */
   }
 }

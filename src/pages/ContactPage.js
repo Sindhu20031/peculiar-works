@@ -63,90 +63,90 @@ const ContactUs = () => {
           <h1 className="contact-heading">Contact Us</h1>
           <p className="contact-subheading">Fill The Form Below</p>
           <form onSubmit={handleSubmit}>
-            {/* Row 1: First Name & Last Name */}
-            <div className="row">
-              <div className="col-md-6 mb-3">
-                <label htmlFor="firstName" className="form-label">
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  className="form-control"
-                  placeholder="Enter your first name"
-                  required
-                />
-              </div>
-              <div className="col-md-6 mb-3">
-                <label htmlFor="lastName" className="form-label">
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  className="form-control"
-                  placeholder="Enter your last name"
-                  required
-                />
-              </div>
-            </div>
+          {/* Row 1: First Name & Last Name */}
+<div className="row">
+  <div className="col-md-6 col-12 mb-3"> {/* col-md-6 for desktop and col-12 for mobile */}
+    <label htmlFor="firstName" className="form-label">
+      First Name
+    </label>
+    <input
+      type="text"
+      id="firstName"
+      name="firstName"
+      value={formData.firstName}
+      onChange={handleChange}
+      className="form-control"
+      placeholder="Enter your first name"
+      required
+    />
+  </div>
+  <div className="col-md-6 col-12 mb-3"> {/* col-md-6 for desktop and col-12 for mobile */}
+    <label htmlFor="lastName" className="form-label">
+      Last Name
+    </label>
+    <input
+      type="text"
+      id="lastName"
+      name="lastName"
+      value={formData.lastName}
+      onChange={handleChange}
+      className="form-control"
+      placeholder="Enter your last name"
+      required
+    />
+  </div>
+</div>
 
-            {/* Row 2: Email & Phone */}
-            <div className="row">
-              <div className="col-md-6 mb-3">
-                <label htmlFor="email" className="form-label">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="form-control"
-                  placeholder="Enter your email"
-                  required
-                />
-              </div>
-              <div className="col-md-6 mb-3">
-                <label htmlFor="phone" className="form-label">
-                  Phone Number
-                </label>
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="form-control"
-                  placeholder="Enter your phone number"
-                  required
-                />
-              </div>
-            </div>
+{/* Row 2: Email & Phone */}
+<div className="row">
+  <div className="col-md-6 col-12 mb-3"> {/* col-md-6 for desktop and col-12 for mobile */}
+    <label htmlFor="email" className="form-label">
+      Email
+    </label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      value={formData.email}
+      onChange={handleChange}
+      className="form-control"
+      placeholder="Enter your email"
+      required
+    />
+  </div>
+  <div className="col-md-6 col-12 mb-3"> {/* col-md-6 for desktop and col-12 for mobile */}
+    <label htmlFor="phone" className="form-label">
+      Phone Number
+    </label>
+    <input
+      type="text"
+      id="phone"
+      name="phone"
+      value={formData.phone}
+      onChange={handleChange}
+      className="form-control"
+      placeholder="Enter your phone number"
+      required
+    />
+  </div>
+</div>
 
-            {/* Row 3: Message */}
-            <div className="mb-3">
-              <label htmlFor="message" className="form-label">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                className="form-control"
-                placeholder="Write your message here"
-                rows="4"
-                required
-              ></textarea>
-            </div>
+{/* Row 3: Message */}
+<div className="mb-3">
+  <label htmlFor="message" className="form-label">
+    Message
+  </label>
+  <textarea
+    id="message"
+    name="message"
+    value={formData.message}
+    onChange={handleChange}
+    className="form-control"
+    placeholder="Write your message here"
+    rows="4"
+    required
+  ></textarea>
+</div>
 
             {/* Submit Button */}
             <button type="submit" className="btn btn-primary w-100">

@@ -1,21 +1,23 @@
-
 /* General Styling */
 .aboutUsPage {
-  background-color: #f8f9fa;
+  background-color: transparent; /* Removed background color for full width */
   padding: 2rem 0;
+  width: 100%; /* Full width */
+  margin: 0 auto;
 }
 
 /* About Us Heading (styled as requested) */
 .aboutUsHeading {
   font-family: "CALISTO MT", serif;
-  font-size: 3rem;
+  font-size: 2.8rem !important;
   text-align: center;
   color: black;
-  margin-top: 50px; /* Adjust top margin */
+  margin-top: 36px!important; /* Adjust top margin */
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
   animation: fadeIn 1s ease-in-out;
+  
 }
 
 .aboutUsHeading::after {
@@ -48,17 +50,21 @@
 
 .aboutUsVideo {
   width: 100%;
-  max-width: 500px;
+  max-width: 350px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-top: -5px;
+  
 }
 
 /* Text Section */
 .aboutUsText {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #555;
   line-height: 1.8;
   padding: 1rem;
+  font-family: "CALISTO MT", serif;
+
 }
 
 /* Animation */
@@ -72,11 +78,11 @@
     opacity: 1;
   }
 }
+
 /* Clients Section */
 .clientsSection {
-  background-color: #f8f9fa;
+  background-color: transparent; /* Removed background color */
   padding: 2rem 0;
-  
 }
 
 .clientsHeading {
@@ -85,7 +91,7 @@
   color: black;
   text-transform: uppercase;
   position: relative;
-  margin-top: 30px;
+  margin-top: 28px;
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -121,24 +127,152 @@
   }
 }
 
-
 /* Mobile View (Responsive) */
 @media (max-width: 768px) {
   .aboutUsContainer {
     flex-direction: column;
     text-align: center;
   }
+  .clientLogo {
+    width: 260px;  /* Bigger logo for mobile */
+    margin-top: -70px;
+  }
+  .aboutUsHeading {
+    margin-top: 10px !important;
+  }
 
   .aboutUsText {
     margin-top: 1.5rem;
     padding: 1rem;
   }
+   /* Reduce gap between About Us and Our Clients */
+   .clientsSection {
+    margin-top: 1rem; /* Adjust this value to reduce the gap */
+  }
+  .aboutUsText p {
+    font-size: 16px; /* Adjust font size for mobile */
+    line-height: 1.5; /* Increase line height for better readability */
+    padding-left:  1.4rem !important;  /* Add some padding to the left */
+    padding-right: 1.4rem !important;
+    font-family: "CALISTO MT", serif;
+  }
+
+  .clientsHeading {
+    margin-top: -5rem; /* Adjust this to reduce the space above the heading */
+  }
+  
+  .aboutUsVideo {
+    width: 130% !important; /* Ensure video fits the screen */
+    margin-top: -35px;
+  }
+  
+}
+
+/* For Larger Screens (Desktops and Larger Laptops) */
+@media (min-width: 1200px) {
+  .aboutUsHeading {
+    font-size: 4rem; /* Larger heading for big screens */
+    margin-top: 80px;
+  }
+
+  .aboutUsText {
+    font-size: 1.4rem; /* Larger text for better readability */
+    padding: 2rem; /* Add more padding for spacious layout */
+  }
 
   .aboutUsVideo {
-    width: 100%; /* Ensure video fits the screen */
+    max-width: 810px ; /* Limit video width to prevent excessive scaling */
+  }
+
+  .clientsHeading {
+    font-size: 3rem; /* Larger heading on large screens */
+  }
+
+  .clientLogo {
+    width: 200px; /* Larger logo size for larger screens */
+  }
+}
+
+/* For Medium-Large Screens (Tablets, Medium-Laptops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .aboutUsHeading {
+    font-size: 3.5rem; /* Slightly larger than mobile size */
+  }
+
+  .aboutUsText {
+    font-size: 1.3rem; /* Make text a bit larger */
+    padding: 1.5rem;
+  }
+
+  .clientsHeading {
+    font-size: 2.2rem;
+  }
+
+  .clientLogo {
+    width: 170px; /* Adjust logo size for medium-large screens */
+    align-items: center;
   }
 }
 
 
+/* Our Influencers Heading (same styling as About Us Heading) */
+.influencersHeading {
+  font-family: "CALISTO MT", serif;
+  font-size: 2.5rem !important;
+  text-align: center;
+  color: black;
+  margin-top: 21px!important; /* Adjust top margin */
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  animation: fadeIn 1s ease-in-out;
+}
+.influencersHeading::after {
+  content: "";
+  display: block;
+  width: 8%; /* Adjust the width of the underline */
+  height: 2px;
+  background-color: #013d79;
+  margin: 8px auto 30px; /* Center the underline */
+}
 
+.influencerCard {
+  border: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 15px;
+  width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
 
+.influencerImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.influencerCard h5 {
+  color: #343a40;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 767px) {
+  .influencerCard {
+    width: 210px;
+    padding: 15px;
+    margin-top: -19px;
+  }
+
+  .influencerImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .influencersHeading {
+    font-size: 1.5rem;
+    margin-top: -50px !important;
+  }
+}

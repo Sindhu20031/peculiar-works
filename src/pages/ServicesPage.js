@@ -1,7 +1,6 @@
-
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link for navigation
-import "../styles/ServicesPage.css"; // Import the CSS file
+import { Link } from "react-router-dom";
+import "../styles/ServicesPage.css";
 
 const ServicesPage = () => {
   const [clicked, setClicked] = useState(null); // Track the clicked button
@@ -37,9 +36,19 @@ const ServicesPage = () => {
     },
   ];
 
-  const handleButtonClick = (id) => {
+  const handleButtonClick = (e, id, link) => {
+    e.preventDefault(); // Prevent the default behavior
+
     setClicked(id);
-    setTimeout(() => setClicked(null), 500); // Reset the button state after animation
+
+    // Scroll to the top of the page
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // Wait before navigating
+    setTimeout(() => {
+      setClicked(null);
+      window.location.href = link; // Manually navigate to the page
+    }, 500); // Delay for smooth scroll effect
   };
 
   return (
@@ -59,7 +68,7 @@ const ServicesPage = () => {
               <Link
                 to={service.link}
                 className={`getQuoteButton ${clicked === service.id ? "active" : ""}`}
-                onClick={() => handleButtonClick(service.id)}
+                onClick={(e) => handleButtonClick(e, service.id, service.link)}
               >
                 Get Quota
               </Link>
@@ -67,9 +76,9 @@ const ServicesPage = () => {
           </div>
         ))}
       </div>
+      
     </div>
   );
 };
 
 export default ServicesPage;
-

@@ -78,7 +78,7 @@ const HRRecruitment = () => {
           />
         </div>
         <div className="contact-form">
-          <h4>Your Note Here!</h4>
+          <h4>Contact Us Now!</h4>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
@@ -110,12 +110,12 @@ const HRRecruitment = () => {
             <textarea
               name="query"
               className="form-control mb-3 message-box contact-input"
-              placeholder="Your Note Here...."
+              placeholder="Your Message Here...."
               value={formData.query}
               onChange={handleChange}
               required
             ></textarea>
-            <button type="submit" className="btn btn-primary w-50">Submit Note</button>
+            <button type="submit" className="btn btn-primary w-50">Submit</button>
           </form>
 
           {statusMessage && <p className="status-message">{statusMessage}</p>}

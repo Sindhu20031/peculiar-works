@@ -11,7 +11,7 @@
   overflow: hidden; /* Prevent scrolling */
   z-index: 1; /* Ensure content stays on top of the video */
   padding-top: 1rem;
-  margin-top: 2rem;
+  margin-top: 2.7rem;
   justify-content: flex-start;
 }
  /* Adjust header spacing and alignment */
@@ -20,6 +20,24 @@
   position: relative; /* Prevent overlapping issues */
   background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a translucent background */
   width: 100%;
+  
+}
+.whatsapp-icon {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 60px; /* Set the size of the icon */
+  height: 60px;
+  cursor: pointer;
+}
+
+.whatsapp-icon img {
+  width: 100%; /* Fill the container */
+  height: 100%;
+  border-radius: 50%; /* Ensures the image itself is circular */
+  object-fit: cover; /* Ensures the image scales properly */
 }
 
 
@@ -52,7 +70,7 @@ body, html {
 .homepage-heading {
   font-family: "Great Vibes", cursive;
   font-weight: bold;
-  font-size: 3rem; /* Adjust size for desktop */
+  font-size: 4vw; /* Adjust size for desktop */
   color: #f1eeee;
   
   margin-top: 6rem;
@@ -62,12 +80,12 @@ body, html {
 /* Homepage Description */
 /* Homepage Description */
 .homepage-description {
-  font-size: 1.2rem; /* Adjust font size as needed */
+  font-size: 1.3rem; /* Adjust font size as needed */
   line-height: 2; /* Space between lines */
-  font-family: "Lucida Handwriting", cursive; /* Font style */
+  font-family: "CALISTO MT", serif;/* Font style */
   color: rgb(244, 244, 248); /* Text color */
   text-align: center; /* Center-align the text */
-  width: 60%; /* Adjust width for proper layout */
+  width: 64%; /* Adjust width for proper layout */
   margin: 0 auto; /* Horizontally center within the container */
   position: relative; /* Position adjustment */
   top: 50%; /* Vertically center */
@@ -129,34 +147,143 @@ body, html {
   /* Adjust container padding and margins */
   .homepage-container {
     padding-top: 0rem;
-    margin-top: 1.7rem;
+    margin-top: 1.4rem;
+    position: relative; /* Ensure positioning for absolute elements */
   }
 
   /* Heading adjustments */
   .homepage-heading {
-    font-size: 2rem;
-    margin-bottom: 7rem;
+    font-size: 2.9rem;
+    margin-bottom: 12rem;
+    position: absolute; /* Fix heading in place */
+    top: 4%; /* Position the heading towards the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    font-weight: bold;
   }
 
   /* Description adjustments */
   .homepage-description {
-    font-size: 1rem;
-    line-height: 1.8;
-    width: 90%; /* Fit content to smaller screens */
+    font-size: 1.3rem;
+    line-height: 1.6;
+    width: 93%; /* Fit content to smaller screens */
     text-indent: 1rem; /* Smaller indentation */
+    position: absolute; /* Fix description position */
+    top: 38%; /* Position description below heading */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    text-align: center; /* Align text in the center */
+    
   }
 
-  /* Button adjustments */
-  .d-flex {
-    flex-direction: row; /* Keep buttons side by side */
+  /* Adjust the layout of buttons in homepage-buttons */
+  .homepage-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically in column */
     justify-content: center; /* Center-align buttons */
-    gap: 1rem; /* Space between buttons */
+    gap: 2rem; /* Space between buttons */
+    padding-top: 80px; /* Add padding to prevent overlap with navbar */
+    align-items: center;
+    position: absolute; /* Fix buttons in place */
+    top: 55%; /* Position buttons below description */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
   }
 
   .btn-custom {
-    width: auto; /* Adjust button size dynamically */
+    width: 20rem; /* Adjust button size dynamically */
     font-size: 1rem; /* Keep text readable */
     padding: 0.8rem; /* Adequate padding */
-    margin-top: -3.5rem;
+    margin-top: 0rem;
+    align-items: center;
+  }
+}
+/* Responsive Styling for 1200px Screens Only */
+@media (width: 1200px) {
+  /* Adjust container padding and margins for 1200px screens */
+  .homepage-container {
+    padding-top: 0rem;
+    margin-top: 2rem;
+  }
+
+  /* Heading adjustments for 1200px screens */
+  .homepage-heading {
+    font-size: 2.5rem; /* Slightly larger heading for 1200px screens */
+    margin-bottom: 9rem; /* Adjust margin to keep balance */
+  }
+
+  /* Description adjustments for 1200px screens */
+  .homepage-description {
+    font-size: 1.1rem; /* Slightly larger font size for better readability */
+    line-height: 1.8;
+    width: 80%; /* Increase the width to fill the screen better */
+    text-indent: 1rem;
+    top: 45%; /* Position description a bit lower */
+  }
+
+  /* Buttons adjustments for 1200px screens */
+  .homepage-buttons {
+    display: flex;
+    flex-direction: row; /* Align buttons in a row for better balance on 1200px screens */
+    justify-content: center; /* Center-align buttons */
+    gap: 2rem; /* Space between buttons */
+    padding-top: 80px; /* Adjust padding to prevent overlap */
+    align-items: center;
+    position: absolute; /* Keep buttons in a fixed position */
+    top: 60%; /* Position buttons below the description */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+  }
+
+  .btn-custom {
+    width: 18rem; /* Slightly smaller buttons for better alignment */
+    font-size: 1rem; /* Keep text readable */
+    padding: 0.8rem; /* Adequate padding */
+    margin-top: 0rem;
+    align-items: center;
+  }
+}
+
+/* Mobile Viewport: Large Screens (iPhone Plus, Larger Android) */
+@media (max-width: 1024px) {
+  /* Adjustments for larger mobile screens */
+  .container {
+    width: 85%; /* Slightly reduced width for larger screens */
+  }
+
+  .text-center {
+    font-size: 1.2rem; /* Slightly larger text */
+    padding: 2rem;
+  }
+
+  .navbar {
+    font-size: 1.1rem;
+  }
+}
+/* Adjust for mobile using media queries */
+@media (max-width: 768px) {
+  .whatsapp-icon {
+    right: 10px; /* Adjusted for mobile */
+    bottom: 10px; /* Adjusted for mobile */
+  }
+
+  .whatsapp-img {
+    width: 50px; /* Smaller size for mobile */
+    height: 50px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .homepage-heading {
+    font-size: 4rem;
+  }
+  .homepage-description {
+    width: 50%;
+  }
+
+  .homepage-buttons {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
   }
 }

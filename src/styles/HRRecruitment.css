@@ -1,13 +1,16 @@
 /* HR Recruitment Page Styles */
 .hr-recruitment-intro h1 {
-    font-family: 'Steamers', cursive;
+    font-family: "CALISTO MT", serif;
     color: #013d79;
-    margin-top: 0rem;
+    margin-top: 1.5rem;
   }
   
   .hr-recruitment-intro p {
-    font-family: 'Momotype Corsiva', cursive;
+    font-family: 'Inter', sans-serif; /* Use Inter font */
+  font-size: 16px; /* Optimal size for readability on desktop */
+  line-height: 1.7; 
     color: #333;
+    margin-top: 2rem;
   }
   
   /* Service Box Styles */
@@ -25,12 +28,14 @@
   
   
   .service-box h3 {
-    font-family: 'Steamers', cursive;
+    font-family: "CALISTO MT", serif;
     color: #013d79;
   }
   
   .service-box p {
-    font-family: 'Momotype Corsiva', cursive;
+    font-family: 'Inter', sans-serif; /* Use Inter font */
+  font-size: 16px; /* Optimal size for readability on desktop */
+  line-height: 1.7; 
     color: #333;
   }
   
@@ -79,7 +84,7 @@
   }
   
   .contact-form h4 {
-    font-family: 'Steamers', cursive;
+    font-family: "CALISTO MT", serif;
     color: #013d79;
     text-align: center;
     font-size: 1.5rem;
@@ -175,18 +180,19 @@
   
   /* Heading Styles */
   .advanced-tool-box h5 {
-    font-family: 'Steamers', cursive;
+    font-family: "CALISTO MT", serif;
     font-size: 1.8rem;
     margin-bottom: 10px;
     color: #fff; /* Ensures the heading text stands out */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    
   }
   
   /* Paragraph Styles */
   .advanced-tool-box p {
-    font-family: 'Momotype Corsiva', cursive;
-    font-size: 1rem;
-    color: #1dc2ca; /* Subtle text color */
+    font-family: 'Inter', sans-serif; /* Use Inter font */
+  font-size: 16px; /* Optimal size for readability on desktop */
+    color: #83ecf1; /* Subtle text color */
   }
   /* Adjusted Width and Center Alignment */
 .advanced-tool-box {
@@ -205,7 +211,7 @@
     margin-bottom: 50px; /* Adjust gap below the last row */
   }
   .cutting-edge h3 {
-    font-family: 'Steamers', cursive;
+    font-family: "CALISTO MT", serif;
     font-size: 2rem; /* Adjust size as needed */
     color: #013d79; /* Theme color for the text */
     text-align: center; /* Centers the heading */
@@ -285,11 +291,66 @@
     max-width: 100%; /* Ensure the image fits well on mobile */
     height: auto;
   }
+  .hr-recruitment-intro h1 {
+    font-size: 2rem;
+    margin-top: -22px;
+  }
 
   .contact-form {
     max-width: 100%; /* Allow form to take full width */
     margin-left: 0.2rem; /* Remove left margin */
     text-align: center;
     width: 110%;
+  }
+  .hr-recruitment-intro p {
+    margin-top: -65px; /* Adjust the top margin to move the paragraph up */
+    font-size: 0.95rem; /* Slightly adjust font size for mobile */
+    margin-bottom: 15px;
+    margin-left: -1.7rem;
+    margin-right: -1.7rem;
+    font-family: 'Lato', sans-serif;
+
+
+  }
+  
+}
+/* For larger screens 1200px and above */
+@media (min-width: 1200px) {
+  .contact-image-form-box {
+    flex-direction: row; /* Keep elements in a row */
+    justify-content: space-between; /* Ensure space between image and form */
+    padding: 20px;
+  }
+
+  .contact-image {
+    margin-bottom: 0; /* Remove bottom margin */
+    justify-content: center; /* Center image horizontally */
+    align-items: flex-end; /* Align image to the bottom */
+    flex: 1;
+  }
+
+  .contact-image img {
+    max-width: 80%; /* Ensure the image size is consistent */
+    height: auto;
+  }
+
+  .contact-form {
+    max-width: 400px; /* Keep the form width the same */
+    margin-left: 20px; /* Maintain left margin */
+    text-align: left; /* Align the form content to the left */
+  }
+
+  .advanced-tool-box {
+    max-width: 1000px; /* Maintain box width on large screens */
+    padding: 30px; /* Keep padding the same */
+    margin: 0 auto 30px; /* Keep centered layout */
+  }
+
+  .row {
+    justify-content: center; /* Keep boxes centered in the row */
+  }
+
+  .cutting-edge h3 {
+    font-size: 2rem; /* Keep font size for cutting-edge heading */
   }
 }
